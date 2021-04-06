@@ -33,12 +33,24 @@ import Subject from "./components/Subject";
 import './App.css';
 
 class App extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+      subject:{title:"WEB", sub:"World Wid Web!"},
+
+      contents:[
+        {id:1, title:'test1', desc: 'This is test1'},
+        {id:2, title:'test2', desc: 'This is test2'},
+        {id:3, title:'test3', desc: 'This is test3'}
+      ]
+    }
+  }
+
   render(){
     return(
       <div className="App">
-        <Subject title="안녕" sub="잘가"></Subject>
-        <Subject></Subject>
-        <ComponentTest></ComponentTest>
+        <Subject title={this.state.subject.title} sub={this.state.subject.sub}></Subject>
+        <ComponentTest data={this.state.contents}></ComponentTest>
       </div>
     );
   }
