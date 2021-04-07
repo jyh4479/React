@@ -19,7 +19,7 @@ class ComponentTest extends Component{
         <ul>
           {lists}
         </ul>
-        <a>{content}</a>
+        <p>{content}</p>
       </nav>
     );
   }
