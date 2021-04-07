@@ -42,6 +42,7 @@ class App extends Component{
 
     return(
       <div className="App">
+      {/* ------------ Subject Component ------------ */}
         <Subject
           title={_title}
           sub={_desc}
@@ -55,7 +56,10 @@ class App extends Component{
           }.bind(this)}
           >
         </Subject>
+      {/* ------------ Subject Component ------------ */}
 
+
+      {/* ------------ ComponentTest Component ------------ */}
         <ComponentTest
           data={this.state.contents}
           content={_selectContent}
@@ -63,6 +67,7 @@ class App extends Component{
             this.setState({contentmode:Number(id)})
           }.bind(this)}
           ></ComponentTest>
+     {/* ------------ ComponentTest Component ------------ */}
       </div>
     );
   }
