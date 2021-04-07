@@ -3,10 +3,15 @@ import React, {Component} from 'react';
 class ComponentTest extends Component{
   render(){
     var lists=[];
+    var content=this.props.content;
     var data=this.props.data; //app에서 넘겨주는 data
     var i=0;
     while(i<data.length){
-      lists.push(<li key={data[i].id} >{data[i].title} {data[i].desc}</li>);
+      lists.push(<li key={data[i].id} ><a href="/" data-id={data[i].id} onClick={function(e){
+        //debugger;
+        e.preventDefault();
+        this.props.onChangeContent(e.target.dataset.id);
+      }.bind(this)}>{data[i].title}</a></li>);
       i=i+1;
     }
     return(
@@ -14,6 +19,7 @@ class ComponentTest extends Component{
         <ul>
           {lists}
         </ul>
+        <a>{content}</a>
       </nav>
     );
   }

@@ -1,32 +1,3 @@
-/*import logo from './logo.svg';
-import './App.css';
-*/
-/*
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-*/
-
-
-
-//import logo from './logo.svg';
 import React, {Component} from 'react';
 import ComponentTest from "./components/ComponentTest";
 import Subject from "./components/Subject";
@@ -37,7 +8,8 @@ class App extends Component{
     super(props);
     this.state={
       mode:"read",
-      subject:{title:"WEB", desc:"World Wid Web!"},
+      contentmode:1,
+      subject:{title:"Read!", desc:"This is read mode!"},
       welcome:{title:"Welcome!", desc:"This is welcome mode!"},
 
       contents:[
@@ -58,27 +30,39 @@ class App extends Component{
       _title=this.state.subject.title;
       _desc=this.state.subject.desc;
     }
+
+    var _selectContent, i=0, data=this.state.contents
+    while(i<data.length){
+      if(data[i].id===this.state.contentmode){
+        _selectContent=data[i].desc;
+        break;
+      }
+      i=i+1
+    }
+
     return(
       <div className="App">
-        <h1><a href='/' onClick={function(e){
-          console.log(e);
-          alert(123);
-          e.preventDefault() //--> a태그의 리로드하는 기본 방식을 막아줌
-          //this.state.mode='welcome'; --> 1. event function 안에서 this는 아무것도 가리키고있지 않다.(bind(this)로 해결가능)
-          //                           --> 2. 리액트의 변수불변 법칙? --> set함수를 이용해야함
-          if(this.state.mode==="read"){
-            this.setState({
-              mode:'welcome'
-            });
-          }
-          else{
-            this.setState({
-              mode:'read'
-            });
-          }
-        }.bind(this)}>MODE</a></h1>
-        <Subject title={_title} sub={_desc}></Subject>
-        <ComponentTest data={this.state.contents}></ComponentTest>
+        <Subject
+          title={_title}
+          sub={_desc}
+          onChangePage={function(){
+            if(this.state.mode==='read'){
+              this.setState({mode:'welcome'})
+            }
+            else{
+              this.setState({mode:'read'})
+            }
+          }.bind(this)}
+          >
+        </Subject>
+
+        <ComponentTest
+          data={this.state.contents}
+          content={_selectContent}
+          onChangeContent={function(id){
+            this.setState({contentmode:Number(id)})
+          }.bind(this)}
+          ></ComponentTest>
       </div>
     );
   }
