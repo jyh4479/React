@@ -26,12 +26,22 @@ class App extends Component{
     console.log('data is [' + JSON.stringify(data+']'));
     this.setState({data});
   };
+  getMyData2 = async() =>{
+    let data = await axios.get("http://localhost:8080/react2");
+    data = data.data;
+    console.log('data is [' + JSON.stringify(data+']'));
+    this.setState({data: data});
+  };
+
+
   componentDidMount() {
       console.log('in componentDidMount');
       this.getMyData();
   }
+  /* Update에서 무한 반복이 일어난다 --> 해당 문제에대한 참조 (https://ko.reactjs.org/docs/react-component.html) */
   componentDidUpdate() {
       console.log('in componentDidUpdate');
+      //this.getMyData2();
   }
   componentWillUnmount() {
       console.log('in componentWillUnmount');
