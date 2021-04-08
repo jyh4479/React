@@ -1,15 +1,48 @@
 import React, {Component} from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import ComponentTest from "./components/ComponentTest";
 import Subject from "./components/Subject";
 import './App.css';
 
 class App extends Component{
+
+  /* Axios테스트 and 비동기 data전달 처리를 테스트하기 위한 함수 */
+  async f1(){
+    try{
+      const response = await axios.get("http://localhost:8080/react");
+      console.log("Function f1's data is ["+response.data+"]");
+      return response.data;
+    }
+    catch(error){
+      console.error(error);
+    }
+  }
+  /* Axios테스트 and 비동기 data전달 처리를 테스트하기 위한 함수 */
+
+/* 비동기 처리 로직 vue에도 적용가능한지 찾아봐야함 */
+  getMyData = async() =>{
+    let data = await axios.get("http://localhost:8080/react");
+    data = data.data;
+    console.log('data is [' + JSON.stringify(data+']'));
+    this.setState({data});
+  };
+  componentDidMount() {
+      console.log('in componentDidMount');
+      this.getMyData();
+  }
+  componentDidUpdate() {
+      console.log('in componentDidUpdate');
+  }
+  componentWillUnmount() {
+      console.log('in componentWillUnmount');
+  }
+/* 비동기 처리 로직 vue에도 적용가능한지 찾아봐야함 */
+
   constructor(props){
     super(props);
     this.state={
-      message:"null",
       mode:"read",
+      data:"null",
       contentmode:1,
       subject:{title:"Read!", desc:"This is read mode!"},
       welcome:{title:"Welcome!", desc:"This is welcome mode!"},
@@ -23,7 +56,7 @@ class App extends Component{
   }
 
   render(){
-    var _title, _desc=null;
+    var _title,_desc=null;
     if(this.state.mode==='welcome'){
       _title=this.state.welcome.title;
       _desc=this.state.welcome.desc;
@@ -42,25 +75,29 @@ class App extends Component{
       i=i+1
     }
 
+    // var test1;
+    // _message=this.f1();
+    // _message.then((value)=>{
+    //   test1=value;
+    //   console.log(test1+" HIHI");
+    // });
+    // console.log(test1+" HIHI1111");
 
-
-    //Axios test
-    Axios.get("http://localhost:8080/react")
-    .then(response=>{
-      console.log(response);
-    })
-    .catch(error=>{
-      console.log(error);
-    });
-    //Axios test
-
-
+    // //axios test
+    // axios.get("http://localhost:8080/react")
+    // .then(response=>{
+    //   this.setState({_title: response.data})
+    // })
+    // .catch(error=>{
+    //   console.log(error);
+    // });
+    // //axios test
 
     return(
       <div className="App">
       {/* ------------ Subject Component ------------ */}
         <Subject
-          title={_title}
+          title={this.state.data+" "+_title}
           sub={_desc}
           onChangePage={function(){
             if(this.state.mode==='read'){
@@ -88,5 +125,4 @@ class App extends Component{
     );
   }
 }
-
 export default App;
