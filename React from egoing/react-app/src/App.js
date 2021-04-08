@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Axios from 'axios';
 import ComponentTest from "./components/ComponentTest";
 import Subject from "./components/Subject";
 import './App.css';
@@ -7,6 +8,7 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state={
+      message:"null",
       mode:"read",
       contentmode:1,
       subject:{title:"Read!", desc:"This is read mode!"},
@@ -39,6 +41,20 @@ class App extends Component{
       }
       i=i+1
     }
+
+
+
+    //Axios test
+    Axios.get("http://localhost:8080/react")
+    .then(response=>{
+      console.log(response);
+    })
+    .catch(error=>{
+      console.log(error);
+    });
+    //Axios test
+
+
 
     return(
       <div className="App">
