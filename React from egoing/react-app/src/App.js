@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import ComponentTest from "./components/ComponentTest";
 import Subject from "./components/Subject";
+import JsonList from "./components/JsonList"
 import './App.css';
 
 class App extends Component{
@@ -31,6 +32,7 @@ class App extends Component{
     let dataList = await axios.get("http://localhost:8000/json");
     dataList = dataList.data;
     console.log('dataList are [' + JSON.stringify(dataList+']'));
+    this.setState({dataList});
   };
 
   componentDidMount() { // --> react mount시 실행되는 함수
@@ -52,6 +54,7 @@ class App extends Component{
     this.state={
       mode:"read",
       data:[],
+      dataList:[],
       contentmode:1,
       subject:{title:"Read!", desc:"This is read mode!"},
       welcome:{title:"Welcome!", desc:"This is welcome mode!"},
@@ -130,6 +133,10 @@ class App extends Component{
           }.bind(this)}
           ></ComponentTest>
      {/* ------------ ComponentTest Component ------------ */}
+
+     {/* ------------ JsonList Component ------------ */}
+     <JsonList dataList={this.state.dataList}></JsonList>
+     {/* ------------ JsonList Component ------------ */}
       </div>
     );
   }
