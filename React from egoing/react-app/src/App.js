@@ -20,28 +20,27 @@ class App extends Component{
   /* Axios테스트 and 비동기 data전달 처리를 테스트하기 위한 함수 */
 
 /* 비동기 처리 로직 vue에도 적용가능한지 찾아봐야함 */
-  getMyData = async() =>{
-    let data = await axios.get("http://localhost:8080/react");
+  getMyData = async() =>{ // --> Spring boot에서 반환하는 String data처리
+    let data = await axios.get("http://localhost:8000/Hello");
     data = data.data;
     console.log('data is [' + JSON.stringify(data+']'));
     this.setState({data});
   };
-  getMyData2 = async() =>{
-    let data = await axios.get("http://localhost:8080/react2");
-    data = data.data;
-    console.log('data is [' + JSON.stringify(data+']'));
-    this.setState({data: data});
+
+  getMyList = async() =>{ // --> Spring boot에서 반환하는 여러 Json data처리
+    let dataList = await axios.get("http://localhost:8000/json");
+    dataList = dataList.data;
+    console.log('dataList are [' + JSON.stringify(dataList+']'));
   };
 
-
-  componentDidMount() {
+  componentDidMount() { // --> react mount시 실행되는 함수
       console.log('in componentDidMount');
       this.getMyData();
+      this.getMyList();
   }
   /* Update에서 무한 반복이 일어난다 --> 해당 문제에대한 참조 (https://ko.reactjs.org/docs/react-component.html) */
   componentDidUpdate() {
       console.log('in componentDidUpdate');
-      //this.getMyData2();
   }
   componentWillUnmount() {
       console.log('in componentWillUnmount');
@@ -52,7 +51,7 @@ class App extends Component{
     super(props);
     this.state={
       mode:"read",
-      data:"null",
+      data:[],
       contentmode:1,
       subject:{title:"Read!", desc:"This is read mode!"},
       welcome:{title:"Welcome!", desc:"This is welcome mode!"},
