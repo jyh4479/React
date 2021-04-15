@@ -1,0 +1,12 @@
+.grid {
+      width: 500px;
+      margin: 0 auto;
+      background-color: dimgrey;
+      overflow: hidden; /*부모 높이를 잊어벼리기때문에 다시 높이를 생기게끔해주는 float해재 기법*/
+}
+
+.grid_item {
+      width: 100px;
+      height: 100px;
+      float: left; /*가로 정렬을 하기위한 float*/
+}

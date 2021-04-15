@@ -5,7 +5,7 @@ class JsonList extends Component{
     var dataList=this.props.dataList;
     console.log(dataList);
     return(
-      <p> {dataList.map(dataList => <div>{dataList.id} {dataList.title} {dataList.contest} {dataList.Date}</div>)} </p>
+      <p> {dataList.map(dataList => <div key={dataList.id}>{dataList.id} {dataList.title} {dataList.contest} {dataList.Date}</div>)} </p>
     )
   }
 }
