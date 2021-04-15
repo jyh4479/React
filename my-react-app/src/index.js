@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App'; //.js가 생략된것
-import App2 from './App2'
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-//react로 만든 컴포넌트 Tag이름은 root로 정의
 ReactDOM.render(
   <React.StrictMode>
-    {/*  <App />  */}
-    <App2/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
