@@ -37,34 +37,38 @@ public class TestController {
     }
 
     @GetMapping("/topMenu")
-    public ArrayList<TopMenuTitle> TopMenuList(){
+    public ArrayList<TopMenuTitle> TopMenuList() {
         logger.info("Request Testing for Axios");
         /* title의 세부 내용 */
         ArrayList<TopMenuContents> contents1 = new ArrayList(Arrays.asList(
-                new TopMenuContents(0,"Content1-1"),
-                new TopMenuContents(1,"Content1-2"),
-                new TopMenuContents(2,"Content1-3"),
-                new TopMenuContents(3,"Content1-4")
+                new TopMenuContents(0, "Content1-1"),
+                new TopMenuContents(1, "Content1-2"),
+                new TopMenuContents(2, "Content1-3"),
+                new TopMenuContents(3, "Content1-4")
         ));
         ArrayList<TopMenuContents> contents2 = new ArrayList(Arrays.asList(
-                new TopMenuContents(0,"Content2-1"),
-                new TopMenuContents(1,"Content2-2"),
-                new TopMenuContents(2,"Content2-3")
+                new TopMenuContents(0, "Content2-1"),
+                new TopMenuContents(1, "Content2-2"),
+                new TopMenuContents(2, "Content2-3")
         ));
         ArrayList<TopMenuContents> contents3 = new ArrayList(Arrays.asList(
-                new TopMenuContents(0,"Content3-1"),
-                new TopMenuContents(1,"Content3-2"),
-                new TopMenuContents(2,"Content3-3"),
-                new TopMenuContents(3,"Content3-4")
+                new TopMenuContents(0, "Content3-1"),
+                new TopMenuContents(1, "Content3-2"),
+                new TopMenuContents(2, "Content3-3"),
+                new TopMenuContents(3, "Content3-4")
         ));
         /* title의 세부 내용 */
 
         /* title의 주 내용 */
         return new ArrayList(Arrays.asList(
-                new TopMenuTitle(0,"Menu1",contents1),
-                new TopMenuTitle(1,"Menu2",contents2),
-                new TopMenuTitle(2,"Menu3",contents3)
+                new TopMenuTitle(0, "Menu1", contents1),
+                new TopMenuTitle(1, "Menu2", contents2),
+                new TopMenuTitle(2, "Menu3", contents3)
         ));
         /* title의 주 내용 */
+    }
+    @GetMapping("/Content1-1")
+    public String content1_1() {
+        return "This is content1-1";
     }
 }

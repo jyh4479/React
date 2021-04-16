@@ -1,12 +1,44 @@
 .grid {
-      width: 500px;
+      width: 700px;
       margin: 0 auto;
-      background-color: dimgrey;
+      /*background-color: dimgrey;*/
       overflow: hidden; /*부모 높이를 잊어벼리기때문에 다시 높이를 생기게끔해주는 float해재 기법*/
 }
 
 .grid_item {
-      width: 100px;
-      height: 100px;
       float: left; /*가로 정렬을 하기위한 float*/
+      margin: 10px;
+}
+
+.itemTitle{
+      text-align: center;
+      background-color: pink;
+}
+
+.itemContents{
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.itemContents a:link{
+      color: black;
+}
+.itemContents a:visited{
+      color: black;
+}
+
+.itemContents a{
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+}
+.grid_item:hover .itemContents{
+      display: block;
+}
+.itemTitle:hover{
+      background-color: teal;
+}
+.itemContents a:hover{ /* 다른 요소에 영향을 주기위해서는 하위 class에 존재해야함 */
+      background-color: #ddd;
 }
