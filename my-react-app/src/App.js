@@ -8,7 +8,6 @@ class App extends Component{
     let dataList= await axios.get("http://localhost:8000/topMenu");
     dataList=dataList.data;
     console.log('DataList ==> '+ JSON.stringify(dataList));
-    //debugger;
     this.setState({MenuList: dataList});
   }
 
