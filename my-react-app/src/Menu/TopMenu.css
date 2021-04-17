@@ -3,12 +3,16 @@
       margin: 0 auto;
       /*background-color: dimgrey;*/
       overflow: hidden; /*부모 높이를 잊어벼리기때문에 다시 높이를 생기게끔해주는 float해재 기법*/
+      text-align: center;
 }
 
 .grid_item {
-      float: left; /*가로 정렬을 하기위한 float*/
       margin: 10px;
+      display: inline-block;
+      vertical-align: middle;
 }
+/* 여러 div 가운데 정렬 */
+/* https://mm4mm.tistory.com/1 */
 
 .itemTitle{
       text-align: center;

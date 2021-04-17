@@ -27,18 +27,37 @@ class App extends Component{
   }
   
 
+  /* -------------- 라이프사이클 관련 함수 -------------- */
+  //https://velog.io/@kyusung/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B5%90%EA%B3%BC%EC%84%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%99%80-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4-%EC%9D%B4%EB%B2%A4%ED%8A%B8
+  
+  // componentWillMount(){
+  //   this.getMenuDataList(); // --> render전에 한번 실행 --> WillMount같은 경우 공식홈페이지에서 권고하지 않음 (내용확인하기)
+  // }
+
   componentDidMount(){
-    this.getMenuDataList();
+    this.getMenuDataList(); // --> render한번 진행하고 실행
   }
-  componentDidUpdate(){
-    console.log('Did update');
-    //this.getMainContentData(this.state.MainContentKey); --> 무한루프 컨트롤해야함! 중요!
+
+  shouldComponentUpdate(nextProps, nextState){
+    if(this.state.MainContentKey!==nextState.MainContentKey){
+      this.getMainContentData(nextState.MainContentKey);
+    }
+    return true;
   }
+
+  // componentWillUpdate(nextProps, nextState){
+  // }
+
+  componentDidUpdate(prevProps,prevState){
+    // console.log(this.state.MainContentKey);
+    // console.log(prevState.MainContentKey);
+  }
+  /* -------------- 라이프사이클 관련 함수 -------------- */
 
   constructor(props){
     super(props);
     this.state={
-      MenuList:[], //초기화가 중요하다 null로하지말자 (https://moonformeli.tistory.com/3)
+      MenuList:[], //초기화가 중요하다 null로하지말자 (https://moonformeli.tistory.com/3) --> 라이프사이클과 관련
       MainContentKey:"초기값",
       MainContentData:"초기값"
     }
@@ -49,7 +68,6 @@ class App extends Component{
         <TopMenu
           dataList={this.state.MenuList}
           onChangeContent={function(contentName){
-            console.log(contentName+' check ');
             this.setState({MainContentKey:contentName});
           }.bind(this)}
         ></TopMenu>

@@ -71,4 +71,16 @@ public class TestController {
     public String content1_1() {
         return "This is content1-1";
     }
+    @GetMapping("/Content2-1")
+    public String content2_1() {
+        return "This is content2-1";
+    }
+    @GetMapping("/Content3-1")
+    public String content3_1() {
+        return "This is content3-1";
+    }
+    @GetMapping("/Content1-2")
+    public String content1_2() {
+        return "This is content1-2";
+    }
 }
