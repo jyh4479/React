@@ -12,7 +12,7 @@ class MainContainer extends Component{
           content={content}
         ></MainContents>
 
-        <LoginForm></LoginForm>
+        {/* <LoginForm></LoginForm> */}
       </div>
     )
   }

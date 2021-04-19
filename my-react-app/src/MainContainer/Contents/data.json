@@ -1,0 +1,22 @@
+[
+  {
+    "image": "/MainContentsImages/image1.jpg",
+    "title": "Titl1",
+    "price": "299,000원~"
+  },
+  {
+    "image": "/MainContentsImages/image2.jpg",
+    "title": "Titl2",
+    "price": "390,000원~"
+  },
+  {
+    "image": "/MainContentsImages/image3.jpg",
+    "title": "Titl3",
+    "price": "129,000원~"
+  },
+  {
+    "image": "/MainContentsImages/image4.jpg",
+    "title": "Titl4",
+    "price": "559,000원~"
+  }
+]
