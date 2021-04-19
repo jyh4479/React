@@ -1,0 +1,9 @@
+.SearchBar{
+  font-size:28px;
+  color: #333;
+  line-height: 50px;
+  font-weight: 600;
+
+  width:85%;
+  text-align: center;
+}

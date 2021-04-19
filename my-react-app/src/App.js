@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+
 import TopMenu from "./Menu/TopMenu";
-import MainContents from "./Contents/MainContents";
+import MainContainer from "./MainContainer/MainContainer";
+import Footer from "./Footer/Footer";
+import TopBanner from "./TopBanner/TopBanner";
+
+import "./App.css";
 
 class App extends Component{
 
@@ -25,11 +30,11 @@ class App extends Component{
     console.log('MainContent ==> '+JSON.stringify(content));
     this.setState({MainContentData: content.data});
   }
-  
+
 
   /* -------------- 라이프사이클 관련 함수 -------------- */
   //https://velog.io/@kyusung/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B5%90%EA%B3%BC%EC%84%9C-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%99%80-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4-%EC%9D%B4%EB%B2%A4%ED%8A%B8
-  
+
   // componentWillMount(){
   //   this.getMenuDataList(); // --> render전에 한번 실행 --> WillMount같은 경우 공식홈페이지에서 권고하지 않음 (내용확인하기)
   // }
@@ -65,6 +70,8 @@ class App extends Component{
   render(){
     return(
       <div className="App">
+        <TopBanner></TopBanner>
+
         <TopMenu
           dataList={this.state.MenuList}
           onChangeContent={function(contentName){
@@ -72,9 +79,11 @@ class App extends Component{
           }.bind(this)}
         ></TopMenu>
 
-        <MainContents 
+        <MainContainer
           content={this.state.MainContentData}
-        ></MainContents>
+        ></MainContainer>
+
+        <Footer></Footer>
       </div>
     );
   }

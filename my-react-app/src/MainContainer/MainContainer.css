@@ -1,0 +1,8 @@
+.MainContainer{
+  display: flex;
+  height:500px;
+}
+
+.MainContainer > div{
+  margin: 0 auto;
+}
