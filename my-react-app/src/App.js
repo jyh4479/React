@@ -80,7 +80,8 @@ class App extends Component{
         ></TopMenu>
 
         <MainContainer
-          content={this.state.MainContentData}
+          /*content={this.state.MainContentData}*/
+          content={this.state.MainContentKey}
         ></MainContainer>
 
         <Footer></Footer>
