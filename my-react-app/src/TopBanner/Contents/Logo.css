@@ -3,7 +3,11 @@
   color: #333;
   line-height: 50px;
   font-weight: 600;
-  width:15%;
-  text-align: center;
+  width:33%;
+  text-align: left;
   /*font-family: NanumSquare;*/
+}
+
+.Logolocation{
+  margin-left: 100px;
 }

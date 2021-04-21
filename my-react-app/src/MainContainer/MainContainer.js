@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import MainContents from "./Contents/MainContents";
-import LoginForm from "./LoginForm/LoginForm";
+//import LoginForm from "./LoginForm/LoginForm";
 import './MainContainer.css';
 
 class MainContainer extends Component{

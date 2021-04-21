@@ -1,0 +1,44 @@
+[
+  {
+    "id":0,
+    "image": "http://via.placeholder.com/100x100/000000/ffffff?text=testImage",
+    "title": "Titl9",
+    "price": "139,000원~"
+  },
+  {
+    "id":1,
+    "image": "http://via.placeholder.com/100x100/000000/ffffff?text=testImage",
+    "title": "Titl10",
+    "price": "34,900원~"
+  },
+  {
+    "id":2,
+    "image": "http://via.placeholder.com/100x100/000000/ffffff?text=testImage",
+    "title": "Titl11",
+    "price": "99,000원~"
+  },
+  {
+    "id":3,
+    "image": "http://via.placeholder.com/100x100/000000/ffffff?text=testImage",
+    "title": "Titl12",
+    "price": "1,559,000원~"
+  },
+  {
+    "id":4,
+    "image": "http://via.placeholder.com/100x100/000000/ffffff?text=testImage",
+    "title": "Titl13",
+    "price": "139,000원~"
+  },
+  {
+    "id":5,
+    "image": "http://via.placeholder.com/100x100/000000/ffffff?text=testImage",
+    "title": "Tit14",
+    "price": "34,900원~"
+  },
+  {
+    "id":6,
+    "image": "http://via.placeholder.com/100x100/000000/ffffff?text=testImage",
+    "title": "Tit15",
+    "price": "99,000원~"
+  }
+]

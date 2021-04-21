@@ -11,25 +11,6 @@
     overflow: hidden;
 }
 
-.swiper-wrapper {
-    display: flex;
-}
-
-.tag_group .tag {
-    padding: 0;
-    border: none;
-    font-size: 13px;
-    color: #6672a4;
-}
-
-.item_title {
-    overflow: hidden;
-    max-height: 58px;
-    margin-top: 15px;
-    font-size: 17px;
-    line-height: 27px;
-}
-
 .price_group {
     margin-top: 18px;
     position: static;
@@ -51,23 +32,6 @@
     font-size: 12px;
 }
 
-ul{
-  width:100%;
-  height: 100%;
-  list-style: none;
-  display: block;
-margin-block-start: 1em;
-margin-block-end: 1em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-padding-inline-start: 40px;
-}
-
-li{
-  margin-left: 80px;
-  margin-right: 80px;
-}
-
 .img {
   width: 200px;
   height: 100px;
@@ -75,4 +39,26 @@ li{
 img{
   max-width: 100%;
   max-height: 100%;
+}
+
+
+
+.swiper-container {
+	width:1000px;
+  height: 300px;
+	padding:30px 0;
+	border-radius:7px;
+}
+.swiper-slide {
+  width:0px;
+	text-align:center;
+	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+	align-items:center; /* 위아래 기준 중앙정렬 */
+	justify-content:center; /* 좌우 기준 중앙정렬 */
+}
+.swiper-scrollbar{
+  display: none;
+}
+.swiper-pagination{
+  display: none;
 }
