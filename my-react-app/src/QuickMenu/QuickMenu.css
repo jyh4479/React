@@ -1,36 +1,30 @@
-.quickWrap {
-    position: fixed;
-    top: 65px;
-    right: 80px;
-    z-index: 100;
-}
-
 .quickMenu{
-  position: absolute;
-  top:171px;
-  left:-34px;
+  position: fixed;
+  top:200px;
+  right:10px;
+  z-index: 100;
 }
 
 /* Quick menu Icon 정의*/
 .quickMenu>ul>li.icon01 a span.ico{
   background: url(https://www.jejudfs.com/image/common/button/icon_user.png) no-repeat;
-  background-color: black;
+  background-color: #5a5c5e;
 }
 .quickMenu>ul>li.icon02 a span.ico{
   background: url(https://www.jejudfs.com/image/common/button/icon_dollar.png) no-repeat;
-  background-color: black;
+  background-color: #5a5c5e;
 }
 .quickMenu>ul>li.icon03 a span.ico{
   background: url(https://www.jejudfs.com/image/common/button/icon_time.png) no-repeat;
-  background-color: black;
+  background-color: #5a5c5e;
 }
 .quickMenu>ul>li.icon04 a span.ico{
   background: url(https://www.jejudfs.com/image/common/button/icon_cart.png) no-repeat;
-  background-color: black;
+  background-color: #5a5c5e;
 }
 .quickMenu>ul>li.icon05 a span.ico{
   background: url(https://www.jejudfs.com/image/common/button/icon_document.png) no-repeat;
-  background-color: black;
+  background-color: #5a5c5e;
 }
 /* Quick menu Icon 정의*/
 
@@ -47,26 +41,23 @@
   list-style:none;
 }
 
-
 .quickMenu>ul>li:hover div.hover{
   width:116px;
   padding-right:43px;
   display: block;
+  position: absolute;
 }
 
-
-
-
-.quickMenu>ul>li>div.hover{
+.quickMenu>ul>li>a>div.hover{
   overflow:hidden;
   position: absolute;
   display: none;
-  top:0;
   right:0;
+  top:0;
   height: 45px;
   line-height: 43px;
   text-align: center;
-  background-color: black;
+  background-color: #5a5c5e;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   color: white;
@@ -77,6 +68,6 @@
 .quickMenu>ul>li>a span.ico{
   display: block;
   width: 45px;
-  height: 46px;
+  height: 45px;
   text-indent: -9999px
 }

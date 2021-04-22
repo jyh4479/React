@@ -6,34 +6,9 @@
     background-color: burlywood;
 }
 
-.prod_list_slide {
-    margin: 0 -20px;
-    overflow: hidden;
-}
-
-.price_group {
-    margin-top: 18px;
-    position: static;
-    text-align: left;
-    margin-bottom: 3px;
-}
-.price_group .price {
-    color: #111;
-}
-.price{
-    display: block;
-    font-size: 22px;
-}
-.tag, .tag_group>span, .badge {
-    display: inline-block;
-    padding: 0 6px;
-    height: 19px;
-    line-height: 17px;
-    font-size: 12px;
-}
-
 .img {
-  width: 200px;
+  margin-top: 40px;
+  width: 300px;
   height: 100px;
 }
 img{
@@ -41,13 +16,24 @@ img{
   max-height: 100%;
 }
 
+.itemOption{
+  width: 300px;
+  height: 300px;
+  background-color:#F0FFF0;
 
+  justify-content: center;
+  align-items: center;
+}
 
 .swiper-container {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  margin-top: 10px;
+  margin-bottom: 10px;
 	width:1000px;
   height: 300px;
 	padding:30px 0;
-	border-radius:7px;
+
 }
 .swiper-slide {
   width:0px;
@@ -61,4 +47,20 @@ img{
 }
 .swiper-pagination{
   display: none;
+}
+
+.ContentTitle{
+  font-style:italic;
+  font-size:20px;
+  margin-right:50px;
+  color:skyblue;
+}
+.ContentShape{
+  font-size:15px;
+  margin-right:85px;
+}
+
+.PriceShape{
+  font-size:25px;
+  margin-top:30px;
 }

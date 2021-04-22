@@ -3,6 +3,7 @@ import DataList from './data.json';
 import DataList2 from './data2.json';
 import DataList3 from './data3.json';
 import './MainContents.css';
+import './ContentList.css';
 import './ContentList';
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -32,6 +33,7 @@ class ContentList extends Component{
 
     return(
       <div>
+        <div className="productTitle" style={{"margin-top":"50px"}}>추천 상품</div>
         <Swiper
              className='swiper-container'
              spaceBetween={5}
@@ -43,28 +45,57 @@ class ContentList extends Component{
              onSlideChange={() => console.log("slide change")}
            >
             <ul>
-              {JsonDataList.map(data => <SwiperSlide><li>
+              {JsonDataList.map(data => <SwiperSlide><li className="itemOption">
                   <div className="img">
                     <img src={data.image}></img>
                   </div>
 
-                  <div>
+                  <div className="ContentTitle">
                     <span>{thisContent}</span>
                   </div>
 
-                  <strong>{data.title}</strong>
+                  <strong className="ContentShape">{data.title}</strong>
 
-                  <div>
+                  <div className="PriceShape">
                     <strong>
                       {data.price}
                     </strong>
                   </div>
                 </li></SwiperSlide>)}
             </ul>
-            <a>
-              <span class="blind">aasdasdasdasdasdsda</span>
-            </a>
           </Swiper>
+
+          <div className="productTitle" style={{"margin-top":"100px"}}>인기 상품</div>
+          <Swiper
+               className='swiper-container'
+               spaceBetween={5}
+               slidesPerView={3}
+               navigation
+               pagination={{ clickable: true }}
+               scrollbar={{ draggable: true }}
+               onSwiper={(swiper) => console.log(swiper)}
+               onSlideChange={() => console.log("slide change")}
+             >
+              <ul>
+                {DataList2.map(data => <SwiperSlide><li className="itemOption" style={{"background-color": "#FFFFF0"}}>
+                    <div className="img">
+                      <img src={data.image}></img>
+                    </div>
+
+                    <div className="ContentTitle" style={{"color":"pink"}}>
+                      <span>{thisContent}</span>
+                    </div>
+
+                    <strong className="ContentShape">{data.title}</strong>
+
+                    <div className="PriceShape">
+                      <strong>
+                        {data.price}
+                      </strong>
+                    </div>
+                  </li></SwiperSlide>)}
+              </ul>
+            </Swiper>
       </div>
     )
   }

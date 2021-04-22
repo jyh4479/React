@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ContentList from './ContentList';
 import TestSlider from './TestSlider';
 import TestBannerSlider from './TestBannerSlider';
+import BannerList from './BannerList';
 import './MainContents.css';
 
 class MainContents extends Component{
@@ -13,6 +14,7 @@ class MainContents extends Component{
             <div className="fixSize">
               <TestBannerSlider></TestBannerSlider>
               <ContentList content={content}></ContentList>
+              <BannerList></BannerList>
             </div>
           )
         }
