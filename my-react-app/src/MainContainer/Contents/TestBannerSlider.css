@@ -3,8 +3,11 @@
   width: 100%;
 }
 .slick-prev{
-  display: none;
+  display: none !important;
 }
 .slick-next{
-  display: none;
+  display: none !important;
+}
+.slick-dots{
+  display: none !important;
 }

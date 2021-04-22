@@ -5,6 +5,7 @@ import TopMenu from "./Menu/TopMenu";
 import MainContainer from "./MainContainer/MainContainer";
 import Footer from "./Footer/Footer";
 import TopBanner from "./TopBanner/TopBanner";
+import QuickMenu from "./QuickMenu/QuickMenu";
 
 import "./App.css";
 
@@ -85,6 +86,8 @@ class App extends Component{
         ></MainContainer>
 
         <Footer></Footer>
+
+        <QuickMenu></QuickMenu>
       </div>
     );
   }
