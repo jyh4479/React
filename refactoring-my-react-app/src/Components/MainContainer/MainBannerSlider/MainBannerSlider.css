@@ -1,0 +1,13 @@
+.slick-slider{
+  position:inherit;
+  width: 100%;
+}
+.slick-prev{
+  display: none !important;
+}
+.slick-next{
+  display: none !important;
+}
+.slick-dots{
+  display: none !important;
+}

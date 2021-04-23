@@ -1,8 +1,13 @@
 import React from 'react';
 
-import About from './About';
-import Home from './Home';
 import {Route, Link} from 'react-router-dom';
+
+import HomePage from './Page/HomePage';
+import TestPage from './Page/TestPage';
+import TestPage2 from './Page/TestPage2';
+import TestPage3 from './Page/TestPage3';
+
+import './App.css';
 
 //exact를 쓰면서 다른 주소에 "/"가 포함되어 있어도 해당 컴포넌트가 출력되지 않음
 
@@ -12,11 +17,17 @@ function App() {
   return (
     <div className="App">
       <div>
-        <Link to="/">홈</Link>
-        <Link to="/about">어바웃</Link>
+        <ul className="mainNav">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/Test"> TestPage </Link></li>
+          <li><Link to="/Test2"> TestPage2 </Link></li>
+          <li><Link to="/Test3"> TestPage3 </Link></li>
+        </ul>
       </div>
-      <Route path="/" component={Home} exact/>
-      <Route path="/about" component={About}/>
+      <Route path="/" component={HomePage} exact/>
+      <Route path="/Test" component={TestPage}/>
+      <Route path="/Test2" component={TestPage2}/>
+      <Route path="/Test3" component={TestPage3}/>
     </div>
   );
 }

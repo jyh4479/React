@@ -1,0 +1,22 @@
+.mainNav{
+  background: #666;
+  text-align: center;
+  list-style: none;
+  margin: 0 auto;
+  height: 50px;
+}
+.mainNav>li{
+  display: inline-block;
+  margin-top:15px;
+  margin-left:50px;
+  margin-right:50px;
+}
+.mainNav>li>a{
+  text-decoration: none;
+}
+.mainNav>li>a:link{
+  color : white;
+}
+.mainNav>li>a:visited{
+  color : white;
+}

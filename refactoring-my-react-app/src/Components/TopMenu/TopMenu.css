@@ -1,0 +1,86 @@
+.grid {
+      margin: 0 auto;
+      /*background-color: dimgrey;*/
+      overflow: hidden; /*부모 높이를 잊어벼리기때문에 다시 높이를 생기게끔해주는 float해재 기법*/
+      border-top: 1px solid #dcdcdc;
+      border-bottom: 1px solid #dcdcdc;
+}
+.grid > div {
+  float:left;
+  width: 20%;
+}
+
+.grid_item {
+      display: inline-block;
+      vertical-align: middle;
+}
+.grid_item > div{
+
+}
+/* 여러 div 가운데 정렬 */
+/* https://mm4mm.tistory.com/1 */
+
+.itemTitle{
+      display: block;
+      height:50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 16.5px;
+      color:#666;
+      font-weight: 600;
+
+      background-position: 50%;
+      position: relative;
+      background-repeat: no-no-repeat;
+      background-size: initial;
+      font-family: NanumSquare;
+}
+
+.itemContents{
+      width: 19.75%;
+      display: none;
+      position: absolute;
+      background-color: white;
+      text-align:center;
+
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border:2px solid black;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+      z-index: 2;
+}
+.itemContents a:link{
+      color: black;
+}
+.itemContents a:visited{
+      color: black;
+}
+
+.itemContents a{
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+}
+/*.grid:hover .itemContents{ --> iken처럼 전체 목록 출력
+  display: block;
+}*/
+
+.grid_item:hover .itemContents{ /* --> 개별 목록 출력 */
+      display: block;
+}
+.grid_item:hover .itemTitle{
+  background-color: black;
+  color:white;
+}
+.itemTitle:hover{
+      background-color: black;
+      color:white;
+}
+.itemTitle:hover{
+
+}
+
+.itemContents a:hover{ /* 다른 요소에 영향을 주기위해서는 하위 class에 존재해야함 */
+      font-weight:800;
+}
