@@ -26,6 +26,14 @@
   background: url(https://www.jejudfs.com/image/common/button/icon_document.png) no-repeat;
   background-color: #5a5c5e;
 }
+.quickMenu>ul>li.icon06 a span.ico{
+  background: url(https://www.jejudfs.com/image/common/button/TOP.png) no-repeat;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #5a5c5e;
+
+  border-top: 1px solid white;
+}
 /* Quick menu Icon 정의*/
 
 

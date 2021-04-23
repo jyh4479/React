@@ -40,6 +40,12 @@ class QuickMenu extends Component{
                 <div className="hover">오늘본상품</div>
               </a>
             </li>
+
+            <li className="icon06">
+              <a href="#header">
+                <span className="ico">testMenu6</span>
+              </a>
+            </li>
           </ul>
         </div>
     )
