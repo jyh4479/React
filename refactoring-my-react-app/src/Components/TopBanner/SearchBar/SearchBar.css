@@ -33,7 +33,7 @@ input {
     background: #fff;
     font-size: 14px;
     font-family: Nanum Gothic,NanumSquare,\\B3CB\C6C0,Dotum,"sans-serif";
-    margin-top: 25px;
+    margin-top: 25px !important;
 }
 
 input[type="text" i] {

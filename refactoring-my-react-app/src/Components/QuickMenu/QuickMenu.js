@@ -42,7 +42,7 @@ class QuickMenu extends Component{
             </li>
 
             <li className="icon06">
-              <a href="#header">
+              <a href="#">
                 <span className="ico">testMenu6</span>
               </a>
             </li>

@@ -11,3 +11,8 @@
 .slick-dots{
   display: none !important;
 }
+
+.slick-slide>div>div>img{
+  width:1903px;
+  height: 500px;
+}

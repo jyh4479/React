@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
 
+import AntdCalendar from '../Components/Antd/AntdCalendar';
+import AntdMenu from '../Components/Antd/AntdMenu';
+
 
 class TestPage2 extends Component{
   render(){
     return(
-      <div>Test page2</div>
+      <div>
+        <AntdCalendar/>
+        <AntdMenu/>
+      </div>
     )
   }
 }

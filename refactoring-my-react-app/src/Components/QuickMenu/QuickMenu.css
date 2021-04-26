@@ -50,7 +50,7 @@
 }
 
 .quickMenu>ul>li:hover div.hover{
-  width:116px;
+  width:150px;
   padding-right:43px;
   display: block;
   position: absolute;

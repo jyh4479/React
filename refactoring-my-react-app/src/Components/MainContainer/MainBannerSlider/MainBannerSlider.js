@@ -25,22 +25,22 @@ class TestBannerSlider extends Component {
     return(
         <Slider /*className={`${temp}.slick-next`}*/ {...settings}>
         <div>
-          <img src="https://placeimg.com/1903/500/animals/aaa" />
+          <img src="/MainBannerImages/MainImage1.jpg" />
         </div>
         <div>
-          <img src="https://placeimg.com/1903/500/any/bbb" />
+          <img src="/MainBannerImages/MainImage2.jpg" />
         </div>
         <div>
-          <img src="https://placeimg.com/1903/500/animals/sepia"/>
+          <img src="/MainBannerImages/MainImage3.jpg"/>
         </div>
         <div>
-          <img src="https://placeimg.com/1903/500/any/grayscale" />
+          <img src="/MainBannerImages/MainImage4.jpg" />
         </div>
         <div>
-          <img src="https://placeimg.com/1903/500/any" />
+          <img src="/MainBannerImages/MainImage5.jpg" />
         </div>
         <div>
-          <img src="https://placeimg.com/1903/500/any/abc" />
+          <img src="/MainBannerImages/MainImage6.jpg" />
         </div>
       </Slider>
     )
