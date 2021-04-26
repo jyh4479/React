@@ -1,3 +1,4 @@
+
 .quickMenu{
   position: fixed;
   top:200px;
@@ -6,27 +7,27 @@
 }
 
 /* Quick menu Icon 정의*/
-.quickMenu>ul>li.icon01 a span.ico{
+.quickMenu>ul>li.icon01 label span.ico{
   background: url(https://www.jejudfs.com/image/common/button/icon_user.png) no-repeat;
   background-color: #5a5c5e;
 }
-.quickMenu>ul>li.icon02 a span.ico{
+.quickMenu>ul>li.icon02 label span.ico{
   background: url(https://www.jejudfs.com/image/common/button/icon_dollar.png) no-repeat;
   background-color: #5a5c5e;
 }
-.quickMenu>ul>li.icon03 a span.ico{
+.quickMenu>ul>li.icon03 label span.ico{
   background: url(https://www.jejudfs.com/image/common/button/icon_time.png) no-repeat;
   background-color: #5a5c5e;
 }
-.quickMenu>ul>li.icon04 a span.ico{
+.quickMenu>ul>li.icon04 label span.ico{
   background: url(https://www.jejudfs.com/image/common/button/icon_cart.png) no-repeat;
   background-color: #5a5c5e;
 }
-.quickMenu>ul>li.icon05 a span.ico{
+.quickMenu>ul>li.icon05 label span.ico{
   background: url(https://www.jejudfs.com/image/common/button/icon_document.png) no-repeat;
   background-color: #5a5c5e;
 }
-.quickMenu>ul>li.icon06 a span.ico{
+.quickMenu>ul>li.icon06 label span.ico{
   background: url(https://www.jejudfs.com/image/common/button/TOP.png) no-repeat;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -38,7 +39,7 @@
 
 
 
-.quickMenu>ul>li>a{
+.quickMenu>ul>li>label{
   position:relative;
   z-index: 1;
   display: block;
@@ -49,14 +50,18 @@
   list-style:none;
 }
 
-.quickMenu>ul>li:hover div.hover{
+.quickMenu>ul>li>label:hover div.hover{
   width:150px;
   padding-right:43px;
   display: block;
   position: absolute;
 }
 
-.quickMenu>ul>li>a>div.hover{
+.quickMenu>ul>li>label:active div.hover{
+  background-color: black;
+}
+
+.quickMenu>ul>li>label>div.hover{
   overflow:hidden;
   position: absolute;
   display: none;
@@ -73,9 +78,30 @@
   font-weight: 400;
 }
 
-.quickMenu>ul>li>a span.ico{
+.quickMenu>ul>li>label span.ico{
   display: block;
   width: 45px;
   height: 45px;
   text-indent: -9999px
+}
+
+.hideButton{
+  position: fixed;
+  left: 50px;
+}
+
+#menuBtn:checked ~ .QuickSliderLocation {
+    display: block;
+}
+#menuBtn2:checked ~ .QuickSliderLocation {
+    display: block;
+}
+#menuBtn3:checked ~ .QuickSliderLocation {
+    display: block;
+}
+#menuBtn4:checked ~ .QuickSliderLocation {
+    display: block;
+}
+#menuBtn5:checked ~ .QuickSliderLocation {
+    display: block;
 }

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import Slider from 'react-slick';
 
 // Import css files
@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import temp from "./TestBannerSlider.css";
 import "./MainBannerSlider.css";
 
-class TestBannerSlider extends Component {
+class TestBannerSlider extends PureComponent {
   render(){
 
     const settings = {

@@ -17,6 +17,7 @@ import Footer from '../Components/Footer/Footer';
 import QuickMenu from '../Components/QuickMenu/QuickMenu';
 
 
+
 class HomePage extends Component{
   constructor(props){
     super(props);
