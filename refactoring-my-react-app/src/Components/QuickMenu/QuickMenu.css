@@ -1,4 +1,3 @@
-
 .quickMenu{
   position: fixed;
   top:200px;
@@ -87,21 +86,5 @@
 
 .hideButton{
   position: fixed;
-  left: 50px;
-}
-
-#menuBtn:checked ~ .QuickSliderLocation {
-    display: block;
-}
-#menuBtn2:checked ~ .QuickSliderLocation {
-    display: block;
-}
-#menuBtn3:checked ~ .QuickSliderLocation {
-    display: block;
-}
-#menuBtn4:checked ~ .QuickSliderLocation {
-    display: block;
-}
-#menuBtn5:checked ~ .QuickSliderLocation {
-    display: block;
+  left: -9999px;
 }
