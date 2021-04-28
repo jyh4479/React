@@ -2,12 +2,30 @@
   position:inherit;
   width: 100%;
 }
-.slick-prev{
+/* .slick-prev{
   display: none !important;
 }
 .slick-next{
   display: none !important;
+} */
+
+.slick-prev{
+  z-index: 500;
+  top:600px;
+  left: 1100px;
+  position:absolute;
+
+  background-color: black !important;
 }
+.slick-next{
+  z-index: 500;
+  top:600px;
+  right: 300px;
+  position:absolute;
+
+  background-color: black !important;
+}
+
 .slick-dots{
   display: none !important;
 }

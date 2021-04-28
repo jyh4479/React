@@ -7,16 +7,18 @@ class QuickMenu extends Component{
     super(props);
     this.clickEvent=this.clickEvent.bind(this);
     this.state={
-      ClickCheck:"1"
+      ClickCheck:1
     }
   }
 
-  clickEvent(){
-    if(this.state.ClickCheck=="1"){
-      this.setState({ClickCheck:"2"});
+  clickEvent(checkNumber,e){
+    if(this.state.ClickCheck==1){
+      this.setState({ClickCheck:2});
+      console.log(checkNumber)
+      console.log(e)
     }
     else{
-      this.setState({ClickCheck:"1"});
+      this.setState({ClickCheck:1});
     }
   }
 
@@ -26,7 +28,7 @@ class QuickMenu extends Component{
       right:'250px'
     };
 
-    if(this.state.ClickCheck=="1"){
+    if(this.state.ClickCheck==1){
       sliderStyle=null;
     }
     else{
@@ -46,14 +48,14 @@ class QuickMenu extends Component{
 
           <ul>
             <li className="icon01">
-              <label for="menuBtn" href="javascript:void(0);" onClick={this.clickEvent}>
+              <label for="menuBtn" href="javascript:void(0);" onClick={this.clickEvent.bind(this,1)}>
                 <span className="ico">testMenu1</span>
                 <div className="hover">내정보</div>
               </label>
             </li>
 
             <li className="icon02">
-              <label for="menuBtn2" href="javascript:void(0);" onClick={this.clickEvent}>
+              <label for="menuBtn2" href="javascript:void(0);" onClick={this.clickEvent.bind(this,2)}>
                 <span className="ico">testMenu</span>
                 <div className="hover">환율</div>
               </label>
@@ -61,7 +63,7 @@ class QuickMenu extends Component{
 
 
             <li className="icon03">
-              <label for="menuBtn3" href="javascript:void(0);" onClick={this.clickEvent}>
+              <label for="menuBtn3" href="javascript:void(0);" onClick={this.clickEvent.bind(this,3)}>
                 <span className="ico">testMenu3</span>
                 <div className="hover">구매가능시간</div>
               </label>
@@ -69,14 +71,14 @@ class QuickMenu extends Component{
 
 
             <li className="icon04">
-              <label for="menuBtn4" href="javascript:void(0);" onClick={this.clickEvent}>
+              <label for="menuBtn4" href="javascript:void(0);" onClick={this.clickEvent.bind(this,4)}>
                 <span className="ico">testMenu4</span>
                 <div className="hover">장바구니</div>
               </label>
             </li>
 
             <li className="icon05">
-              <label for="menuBtn5" href="javascript:void(0);" onClick={this.clickEvent}>
+              <label for="menuBtn5" href="javascript:void(0);" onClick={this.clickEvent.bind(this,5)}>
                 <span className="ico">testMenu5</span>
                 <div className="hover">오늘본상품</div>
               </label>

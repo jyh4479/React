@@ -10,7 +10,7 @@ class SearchBar extends Component{
             <input type="text" name="q" autocomplete="off" placeholder="메뉴 검색!"></input>
           </label>
           <button className="buttonShape">
-            <img src="/searchImage.png" alt="검색"></img>
+            <img src="/TopBannerImages/searchImage.png" alt="검색"></img>
           </button>
         </form>
       </div>

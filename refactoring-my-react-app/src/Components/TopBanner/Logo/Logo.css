@@ -1,14 +1,9 @@
 .Logo{
-  font-size:28px;
-  color: #333;
-  line-height: 50px;
-  font-weight: 600;
   width:33%;
-  text-align: left;
-  /*font-family: NanumSquare;*/
+  text-align: center;
 }
 
-.Logolocation{
-  margin-left: 100px;
-  margin-top: 20px;
+.Logo>a>img{
+  margin-top:20px;
+  width: 250px
 }
