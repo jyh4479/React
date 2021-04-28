@@ -7,18 +7,18 @@ class QuickMenu extends Component{
     super(props);
     this.clickEvent=this.clickEvent.bind(this);
     this.state={
-      ClickCheck:1
+      ClickCheck:0
     }
   }
 
   clickEvent(checkNumber,e){
-    if(this.state.ClickCheck==1){
-      this.setState({ClickCheck:2});
+    if(this.state.ClickCheck==0){
+      this.setState({ClickCheck:checkNumber});
       console.log(checkNumber)
       console.log(e)
     }
     else{
-      this.setState({ClickCheck:1});
+      this.setState({ClickCheck:0});
     }
   }
 
@@ -28,7 +28,7 @@ class QuickMenu extends Component{
       right:'250px'
     };
 
-    if(this.state.ClickCheck==1){
+    if(this.state.ClickCheck==0){
       sliderStyle=null;
     }
     else{

@@ -12,7 +12,7 @@ class QuickSlider extends Component{
       display: 'block'
     };
 
-    if(ClickCheck=="1") return (<div className="QuickSliderLocation" style={displayStyle}> This is Quick Slider! {ClickCheck} </div>);
+    if(ClickCheck==0) return (<div className="QuickSliderLocation" style={displayStyle}> This is Quick Slider! {ClickCheck} </div>);
     else return (<div className="QuickSliderLocation" style={displayStyle2}> This is Quick Slider! {ClickCheck} </div>)
   }
 }
