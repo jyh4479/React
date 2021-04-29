@@ -34,7 +34,7 @@
 
   border-top: 1px solid white;
 }
-.quickMenu>ul>li.icon06:active{
+.quickMenu>ul>li.icon06 label span.ico:active{
   background-color: black;
 }
 /* Quick menu Icon 정의*/

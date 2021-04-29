@@ -1,3 +1,9 @@
+@import './NoSearchTab.css';
+
+.search>form>label>input:focus-within ~ .tabSize{
+  display: block;
+}
+
 .search {
     position: relative;
     float: left;
