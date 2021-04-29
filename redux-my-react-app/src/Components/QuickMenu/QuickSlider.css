@@ -1,0 +1,12 @@
+.QuickSliderLocation{
+  position: fixed;
+  top:214px;
+  right:0px;
+
+  background-color: white;
+  width: 250px;
+  height: 100%;
+
+  border-style: solid;
+  border-color: #5a5c5e;
+}

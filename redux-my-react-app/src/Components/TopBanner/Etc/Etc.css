@@ -1,0 +1,14 @@
+.Etc{
+  width:33%;
+  display: flex;
+}
+.Etclocation{
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.Etclocation>a:visited{
+  color: black;
+}

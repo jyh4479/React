@@ -1,0 +1,9 @@
+.Logo{
+  width:33%;
+  text-align: center;
+}
+
+.Logo>a>img{
+  margin-top:20px;
+  width: 250px
+}

@@ -1,0 +1,24 @@
+.relative{
+  position: relative;
+}
+.inner{
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.address p{
+  line-height: 24px;
+  font-size: 13px;
+}
+.address p a{
+  color:#706f6f;
+}
+.address p b{
+  font-weight: 600;
+  font-size: 16.5px;
+  color: #727171;
+}
+.footer{
+  border-top: 1px solid #dcdcdc;
+  text-align: center;
+  margin-top:20px;
+}

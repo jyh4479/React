@@ -1,0 +1,93 @@
+.quickMenu{
+  position: fixed;
+  top:200px;
+  right:10px;
+  z-index: 100;
+}
+
+/* Quick menu Icon 정의*/
+.quickMenu>ul>li.icon01 label span.ico{
+  background: url(https://www.jejudfs.com/image/common/button/icon_user.png) no-repeat;
+  background-color: #5a5c5e;
+}
+.quickMenu>ul>li.icon02 label span.ico{
+  background: url(https://www.jejudfs.com/image/common/button/icon_dollar.png) no-repeat;
+  background-color: #5a5c5e;
+}
+.quickMenu>ul>li.icon03 label span.ico{
+  background: url(https://www.jejudfs.com/image/common/button/icon_time.png) no-repeat;
+  background-color: #5a5c5e;
+}
+.quickMenu>ul>li.icon04 label span.ico{
+  background: url(https://www.jejudfs.com/image/common/button/icon_cart.png) no-repeat;
+  background-color: #5a5c5e;
+}
+.quickMenu>ul>li.icon05 label span.ico{
+  background: url(https://www.jejudfs.com/image/common/button/icon_document.png) no-repeat;
+  background-color: #5a5c5e;
+}
+.quickMenu>ul>li.icon06 label span.ico{
+  background: url(https://www.jejudfs.com/image/common/button/TOP.png) no-repeat;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #5a5c5e;
+
+  border-top: 1px solid white;
+}
+.quickMenu>ul>li.icon06 label span.ico:active{
+  background-color: black;
+}
+/* Quick menu Icon 정의*/
+
+
+
+.quickMenu>ul>li>label{
+  position:relative;
+  z-index: 1;
+  display: block;
+  opacity: .78; /*투명도*/
+}
+
+.quickMenu>ul{
+  list-style:none;
+}
+
+.quickMenu>ul>li>label:hover div.hover{
+  width:150px;
+  padding-right:43px;
+  display: block;
+  position: absolute;
+}
+
+.quickMenu>ul>li>label:active div.hover{
+  background-color: black;
+}
+
+.quickMenu>ul>li>label>div.hover{
+  overflow:hidden;
+  position: absolute;
+  display: none;
+  right:0;
+  top:0;
+  height: 45px;
+  line-height: 43px;
+  text-align: center;
+  background-color: #5a5c5e;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.quickMenu>ul>li>label span.ico{
+  display: block;
+  width: 45px;
+  height: 45px;
+  text-indent: -9999px
+}
+
+.hideButton{
+  position: fixed;
+  left: -9999px;
+}
