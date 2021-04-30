@@ -1,4 +1,5 @@
 .mainNav{
+  opacity: .80; /*투명도*/
   background: #666;
   text-align: center;
   list-style: none;
