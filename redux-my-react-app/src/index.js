@@ -6,13 +6,24 @@ import reportWebVitals from './reportWebVitals';
 
 import {BrowserRouter} from 'react-router-dom';
 
+/* redux 설정 */
+import{Provider} from "react-redux";
+import{combineReducers,createStore} from "redux";
+import reducers from './redux/reducers';
+
+const store = createStore(combineReducers(reducers),window.__REDUX_DEVTOOLS_EXTENSION__&&window.__REDUX_DEVTOOLS_EXTENSION__());
+
+
 //HTML5에서 History API를 사용해서 새로고침하지 않고 주소 변경 (페이지 깜빡거림 X)
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <BrowserRouter>
+        <App/>
+      </BrowserRouter>
+    </React.StrictMode>
+  </Provider>
+  ,
   document.getElementById('root')
 );
 

@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import QuickSlider from './QuickSlider';
 import './QuickMenu.css';
 
+import action from '../../redux/actions';
+import {connect} from 'react-redux';
+
 class QuickMenu extends Component{
   constructor(props){
     super(props);
@@ -11,6 +14,7 @@ class QuickMenu extends Component{
     }
   }
 
+  /*기존 기능 함*/
   clickEvent(checkNumber,e){
     if(this.state.ClickCheck==0){
       this.setState({ClickCheck:checkNumber});
@@ -21,8 +25,17 @@ class QuickMenu extends Component{
       this.setState({ClickCheck:0});
     }
   }
+  /*기존 기능 함수*/
+
+  /*Redux Test 함수*/
+  changeColor(color,e){
+    this.props.dispatch(action.eventAction.setText({color:{color}}))
+    console.log(color)
+  }
+  /*Redux Test 함수*/
 
   render(){
+    /*기존 기능 로직*/
     let sliderStyle=null;
     const displayStyle={
       right:'250px'
@@ -48,14 +61,14 @@ class QuickMenu extends Component{
 
           <ul>
             <li className="icon01">
-              <label for="menuBtn" href="javascript:void(0);" onClick={this.clickEvent.bind(this,1)}>
+              <label for="menuBtn" href="javascript:void(0);" onClick={this.changeColor.bind(this,"black")}>
                 <span className="ico">testMenu1</span>
                 <div className="hover">내정보</div>
               </label>
             </li>
 
             <li className="icon02">
-              <label for="menuBtn2" href="javascript:void(0);" onClick={this.clickEvent.bind(this,2)}>
+              <label for="menuBtn2" href="javascript:void(0);" onClick={this.changeColor.bind(this,"red")}>
                 <span className="ico">testMenu</span>
                 <div className="hover">환율</div>
               </label>
@@ -63,7 +76,7 @@ class QuickMenu extends Component{
 
 
             <li className="icon03">
-              <label for="menuBtn3" href="javascript:void(0);" onClick={this.clickEvent.bind(this,3)}>
+              <label for="menuBtn3" href="javascript:void(0);" onClick={this.changeColor.bind(this,"skyblue")}>
                 <span className="ico">testMenu3</span>
                 <div className="hover">구매가능시간</div>
               </label>
@@ -71,14 +84,14 @@ class QuickMenu extends Component{
 
 
             <li className="icon04">
-              <label for="menuBtn4" href="javascript:void(0);" onClick={this.clickEvent.bind(this,4)}>
+              <label for="menuBtn4" href="javascript:void(0);" onClick={this.changeColor.bind(this,"green")}>
                 <span className="ico">testMenu4</span>
                 <div className="hover">장바구니</div>
               </label>
             </li>
 
             <li className="icon05">
-              <label for="menuBtn5" href="javascript:void(0);" onClick={this.clickEvent.bind(this,5)}>
+              <label for="menuBtn5" href="javascript:void(0);" onClick={this.changeColor.bind(this,"yellow")}>
                 <span className="ico">testMenu5</span>
                 <div className="hover">오늘본상품</div>
               </label>
@@ -95,4 +108,4 @@ class QuickMenu extends Component{
     )
   }
 }
-export default QuickMenu;
+export default connect()(QuickMenu);
