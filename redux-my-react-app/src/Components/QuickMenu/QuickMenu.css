@@ -45,7 +45,7 @@
   position:relative;
   z-index: 1;
   display: block;
-  opacity: .78; /*투명도*/
+  opacity: .65; /*투명도*/
 }
 
 .quickMenu>ul{

@@ -12,6 +12,11 @@ const eventReducer = (state = initialState,action)=>{
     case actions.eventAction.SET_TEXT:
       return{
         text: action.text,
+        color:"this.state.color"
+      }
+    case actions.eventAction.SET_COLOR:
+      return{
+        text:" this.state.text",
         color:action.color
       }
     default:
@@ -19,3 +24,5 @@ const eventReducer = (state = initialState,action)=>{
   }
 }
 export default eventReducer;
+
+/*https://justmakeyourself.tistory.com/entry/redex-exmaple*/

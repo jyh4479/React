@@ -2,8 +2,12 @@ import React, {Component} from 'react';
 import QuickSlider from './QuickSlider';
 import './QuickMenu.css';
 
-import action from '../../redux/actions';
+
+import eventReducer from "../../redux/reducers/eventReducer";
+import action from "../../redux/actions";
 import {connect} from 'react-redux';
+import { toJS } from 'immutable'
+
 
 class QuickMenu extends Component{
   constructor(props){
@@ -29,12 +33,19 @@ class QuickMenu extends Component{
 
   /*Redux Test 함수*/
   changeColor(color,e){
-    this.props.dispatch(action.eventAction.setText({color:{color}}))
+    this.props.dispatch(action.eventAction.setColor({color:{color}}))
     console.log(color)
   }
   /*Redux Test 함수*/
 
   render(){
+
+    const reduxColor = this.props.eventReducerState.color || '교육'
+
+    const colorStyle={
+      backgroundColor: reduxColor.color
+    }
+
     /*기존 기능 로직*/
     let sliderStyle=null;
     const displayStyle={
@@ -62,44 +73,44 @@ class QuickMenu extends Component{
           <ul>
             <li className="icon01">
               <label for="menuBtn" href="javascript:void(0);" onClick={this.changeColor.bind(this,"black")}>
-                <span className="ico">testMenu1</span>
-                <div className="hover">내정보</div>
+                <span className="ico" style={colorStyle}>testMenu1</span>
+                <div className="hover" style={colorStyle}>내정보</div>
               </label>
             </li>
 
             <li className="icon02">
               <label for="menuBtn2" href="javascript:void(0);" onClick={this.changeColor.bind(this,"red")}>
-                <span className="ico">testMenu</span>
-                <div className="hover">환율</div>
+                <span className="ico" style={colorStyle}>testMenu</span>
+                <div className="hover" style={colorStyle}>환율</div>
               </label>
             </li>
 
 
             <li className="icon03">
-              <label for="menuBtn3" href="javascript:void(0);" onClick={this.changeColor.bind(this,"skyblue")}>
-                <span className="ico">testMenu3</span>
-                <div className="hover">구매가능시간</div>
+              <label for="menuBtn3" href="javascript:void(0);" style={colorStyle} onClick={this.changeColor.bind(this,"skyblue")}>
+                <span className="ico" style={colorStyle}>testMenu3</span>
+                <div className="hover" style={colorStyle}>구매가능시간</div>
               </label>
             </li>
 
 
             <li className="icon04">
-              <label for="menuBtn4" href="javascript:void(0);" onClick={this.changeColor.bind(this,"green")}>
-                <span className="ico">testMenu4</span>
-                <div className="hover">장바구니</div>
+              <label for="menuBtn4" href="javascript:void(0);" style={colorStyle} onClick={this.changeColor.bind(this,"green")}>
+                <span className="ico" style={colorStyle}>testMenu4</span>
+                <div className="hover" style={colorStyle}>장바구니</div>
               </label>
             </li>
 
             <li className="icon05">
-              <label for="menuBtn5" href="javascript:void(0);" onClick={this.changeColor.bind(this,"yellow")}>
-                <span className="ico">testMenu5</span>
-                <div className="hover">오늘본상품</div>
+              <label for="menuBtn5" href="javascript:void(0);" style={colorStyle} onClick={this.changeColor.bind(this,"yellow")}>
+                <span className="ico" style={colorStyle}>testMenu5</span>
+                <div className="hover" style={colorStyle}>오늘본상품</div>
               </label>
             </li>
 
             <li className="icon06">
               <label href="#">
-                <span className="ico">testMenu6</span>
+                <span className="ico" style={colorStyle}>testMenu6</span>
               </label>
             </li>
 
@@ -108,4 +119,19 @@ class QuickMenu extends Component{
     )
   }
 }
-export default connect()(QuickMenu);
+
+const fromJsStateToProps = (state) => {
+    const eventReducer = state.eventReducer;
+    return {
+        eventReducerState: eventReducer
+    };
+}
+
+const fromJsDispatchToProps = dispatch => ({
+  dispatch //-->https://stackoverflow.com/questions/36850988/this-props-dispatch-not-a-function-react-redux/36851517
+
+    // onChangeText: () => dispatch(action.eventAction.setText({text:'교육끝'})),
+    // onChangeText2: () => dispatch(action.eventAction.setText({text:'교육'})),
+});
+
+export default connect(fromJsStateToProps, fromJsDispatchToProps)(QuickMenu);
