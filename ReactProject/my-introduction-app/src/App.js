@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import TopNavigation from "./Components/TopNavigation/TopNavigation";
+import HomeSection from "./Components/HomeSection/HomeSection";
+import AboutSection from "./Components/AboutSection/AboutSection";
+import FeatureSection from "./Components/FeatureSection/FeatureSection";
+import ServiceSection from "./Components/ServiceSection/ServiceSection";
+import TeamSection from "./Components/TeamSection/TeamSection";
+import ChooseSection from "./Components/ChooseSection/ChooseSection";
+import PortfolioSection from "./Components/ProtfolioSection/PortfolioSection";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <TopNavigation></TopNavigation>
+        <HomeSection></HomeSection>
+        <AboutSection></AboutSection>
+        <FeatureSection></FeatureSection>
+        <ServiceSection></ServiceSection>
+        {/* <TeamSection></TeamSection> 오류찾기 */}
+        <ChooseSection></ChooseSection>
+        {/* <PortfolioSection></PortfolioSection> 오류찾기 */}
+        <Footer></Footer>
     </div>
   );
 }
