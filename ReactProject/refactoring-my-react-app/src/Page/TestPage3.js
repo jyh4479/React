@@ -4,8 +4,9 @@ import './TestPage3.css';
 
 
 export default function TestPage3() {
-
-
+    
+    
+    // const Box = (props) => { --> hook으로 대신 가능
   function Box(props) {
     const mesh = useRef()
     const [state, setState] = useState({isHovered: false, isActive: false})

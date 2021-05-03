@@ -1,0 +1,13 @@
+.edit-mode:hover{
+    border:1px dashed #666;
+    background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+.edit-box{
+    margin-bottom: 20px;
+    line-height: 105px;
+}
+
+.edit-container{
+    display: inline-block;
+}
