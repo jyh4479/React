@@ -7,7 +7,7 @@ class DisplayNumberRoot extends Component{
             <div>
                 <h1>Display Number Root</h1>
                 {/*<DisplayNumber number={this.props.number}></DisplayNumber>*/}
-                <DisplayNumber></DisplayNumber>
+                <DisplayNumber unit="kg"></DisplayNumber>
             </div>
         )
     }
