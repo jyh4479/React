@@ -1,5 +1,5 @@
-import eventReducer from "./eventReducer";
-
-export default{
-  eventReducer
-}
+// import eventReducer from "./eventReducer";
+//
+// export default{
+//   eventReducer
+// }
