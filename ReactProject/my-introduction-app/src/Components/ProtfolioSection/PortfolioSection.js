@@ -27,7 +27,7 @@ class PortfolioSection extends Component{
                             </div>
 
 
-                            <div style="clear: both;"></div>
+                            <div style={{clear:'both'}}></div>
 
                             <div className="grid text-center">
 
@@ -109,9 +109,7 @@ class PortfolioSection extends Component{
                                 </div>
 
                             </div>
-
-                            <div style="clear: both;"></div>
-
+                            <div style={{clear:'both'}}></div>
                         </div>
                     </div>
                 </div>

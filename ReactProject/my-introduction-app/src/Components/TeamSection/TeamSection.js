@@ -74,14 +74,14 @@ class TeamSection extends Component{
                                             <div className="teamskillbar clearfix m-top-50 text-uppercase"
                                                  data-percent="80%">
                                                 <label>Photoshop</label>
-                                                <div className="teamskillbar-bar" style="width: 80%;"></div>
+                                                <div className="teamskillbar-bar" style={{width:'80%'}}></div>
                                             </div>
 
 
                                             <div className="teamskillbar clearfix m-top-50 text-uppercase"
                                                  data-percent="75%">
                                                 <label>Web Design</label>
-                                                <div className="teamskillbar-bar" style="width: 75%;"></div>
+                                                <div className="teamskillbar-bar" style={{width:'75%'}}></div>
                                             </div>
 
                                         </div>
@@ -90,14 +90,14 @@ class TeamSection extends Component{
                                             <div className="teamskillbar clearfix m-top-50 text-uppercase"
                                                  data-percent="90%">
                                                 <label>DEvelopment</label>
-                                                <div className="teamskillbar-bar" style="width: 90%;"></div>
+                                                <div className="teamskillbar-bar" style={{width:'90%'}}></div>
                                             </div>
 
 
                                             <div className="teamskillbar clearfix m-top-50 text-uppercase"
                                                  data-percent="98%">
                                                 <label>Branding</label>
-                                                <div className="teamskillbar-bar" style="width: 98%;"></div>
+                                                <div className="teamskillbar-bar" style={{width:'98%'}}></div>
                                             </div>
 
                                         </div>
