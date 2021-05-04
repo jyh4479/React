@@ -1,0 +1,29 @@
+.row-add{
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.container-add{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.edit-mode:hover{
+    border:1px dashed #666;
+    background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+.title-button-location{
+    right:15px;
+    bottom:50.5px;
+}
+
+.content-button-location{
+    right:15px;
+    bottom:-7px;
+}
+
+.about-edit-box{
+    line-height: 100px;
+}

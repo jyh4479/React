@@ -4,9 +4,11 @@ import './HomeSections.css';
 class HomeSection extends Component{
     constructor(props) {
         super(props);
+
         this.editEvent=this.editEvent.bind(this);
         this.changeEvent=this.changeEvent.bind(this);
-        this.cancleEvent=this.cancleEvent.bind(this);
+        this.cancelEvent=this.cancelEvent.bind(this);
+        this.enterEvent=this.enterEvent.bind(this);
 
         this.state={
             homeMessage:"Welcome to My Page",
@@ -14,42 +16,55 @@ class HomeSection extends Component{
         }
     }
 
-    editEvent(e){
+    editEvent(){
         this.setState({mode:"edit"});
     }
-    changeEvent(e){
+    changeEvent(){
        let input = document.getElementById("input").value;
+       input=input.trim();
+
+       if(input.length==0){
+           input=this.state.homeMessage;
+       }
+
        this.setState({homeMessage:input});
        this.setState({mode:"view"});
     }
-    cancleEvent(e){
+    cancelEvent(){
         this.setState({mode:"view"});
     }
+    enterEvent(e){
+        let keyCode=e.key;
+        if(keyCode==="Enter"){
+            this.changeEvent();
+        }
+    }
+
+
 
     render(){
-        /* --- view 정의 --- */
+        const {editEvent, changeEvent, cancelEvent, enterEvent, event} = this;
+
+        /* -------- view 관련 logic -------- */
         const viewStyle={
             display: 'block',
-            textAlign:'center'
         }
-        const editStyle={
+        const noneViewStyle={
             display: 'none'
         }
-        /* --- view 정의 --- */
 
-        /* --- 조건에 따라 적용될 Style결정 --- */
         let messageStyle;
         let inputStyle;
 
         if(this.state.mode==='edit'){
-            messageStyle=editStyle;
+            messageStyle=noneViewStyle;
             inputStyle=viewStyle;
         }
         else{
             messageStyle=viewStyle;
-            inputStyle=editStyle;
+            inputStyle=noneViewStyle;
         }
-        /* --- 조건에 따라 적용될 Style결정 --- */
+        /* -------- view 관련 logic -------- */
 
         return(
             <section id="home" className="home bg-black fix">
@@ -62,11 +77,13 @@ class HomeSection extends Component{
                                     <div className="slid_item">
                                         <div className="home_text">
 
-                                            <h1 className="edit-mode" style={messageStyle}><a className="text-yellow" onClick={this.editEvent}>{this.state.homeMessage}</a></h1>
-                                            <div className="edit-container" style={inputStyle}>
-                                                <input type="text" id="input" className="edit-box"></input>
-                                                <button onClick={this.changeEvent}>변경</button>
-                                                <button onClick={this.cancleEvent}>취소</button>
+                                            <h1 className="edit-mode" style={messageStyle}><a className="text-yellow" onClick={editEvent}>{this.state.homeMessage}</a></h1>
+                                            <div style={inputStyle}>
+                                                <input type="text" id="input" className="edit-box" onKeyPress={enterEvent} placeholder={this.state.homeMessage}></input>
+                                                <div className="button-location">
+                                                    <button className="button-style" onClick={changeEvent}>수정</button>
+                                                    <button className="button-style" style={{borderLeftColor: 'white'}} onClick={cancelEvent}>취소</button>
+                                                </div>
                                             </div>
 
                                             <div className="align-center">

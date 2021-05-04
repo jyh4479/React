@@ -4,10 +4,31 @@
 }
 
 .edit-box{
+    width:100%;
     margin-bottom: 20px;
-    line-height: 105px;
+    line-height: 100px;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    border: 2px solid orange;
 }
 
-.edit-container{
-    display: inline-block;
+.button-location{
+    position: absolute;
+    right: 0;
+    bottom:35px;
+}
+
+.button-style{
+    color: white;
+    background-color: orange;
+    border: 2px solid orange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.button-style:hover{
+    background-color: #5cb85c;
+}
+
+.home_text{
+    position: relative;
 }
