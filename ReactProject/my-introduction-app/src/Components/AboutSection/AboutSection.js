@@ -7,7 +7,16 @@ import Draggable from 'react-draggable';
 class AboutSection extends Component{
     constructor(props) {
         super(props);
+
         this.state={
+            titleId1:"t1",
+            titleId2:"t2",
+            titleId3:"t3",
+
+            contentId1:"c1",
+            contentId2:"c2",
+            contentId3:"c3",
+
             title1:"Values",
             title2:"Goals",
             title3:"Hobbies",
@@ -33,16 +42,22 @@ class AboutSection extends Component{
                     <AboutContents
                         title={this.state.title1}
                         content={this.state.content1}
+                        titleId={this.state.titleId1}
+                        contentId={this.state.contentId1}
                     ></AboutContents>
 
                     <AboutContents
                         title={this.state.title2}
                         content={this.state.content2}
+                        titleId={this.state.titleId2}
+                        contentId={this.state.contentId2}
                     ></AboutContents>
 
                     <AboutContents
                         title={this.state.title3}
                         content={this.state.content3}
+                        titleId={this.state.titleId3}
+                        contentId={this.state.contentId3}
                     ></AboutContents>
                 </div>
             </section>
