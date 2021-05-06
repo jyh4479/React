@@ -10,6 +10,7 @@
         justify-content: center;
     }
 }
+
 @media screen and (max-width:300px){
     .container-add{
         display: flex;
@@ -19,6 +20,8 @@
 }
 
 /*
+
+
 //1)모바일을 우선할 경우 다음과 같은 순서로 작성이 됩니다.
 
 //모바일에 적용될 스타일을 먼저 작성합니다.

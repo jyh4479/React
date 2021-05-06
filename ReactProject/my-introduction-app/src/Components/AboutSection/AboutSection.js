@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import AboutContents from "./AboutContents";
 import './AboutSection.css'
+import MessageBox from "../../MyComponents/MessageBox";
 
 import Draggable from 'react-draggable';
 
@@ -39,26 +40,42 @@ class AboutSection extends Component{
             <>
             <section id="about" className="about bg-yellow roomy-80">
                 <div className="container container-add">
-                    <AboutContents
-                        title={this.state.title1}
-                        content={this.state.content1}
-                        titleId={this.state.titleId1}
-                        contentId={this.state.contentId1}
-                    ></AboutContents>
 
-                    <AboutContents
-                        title={this.state.title2}
-                        content={this.state.content2}
-                        titleId={this.state.titleId2}
-                        contentId={this.state.contentId2}
-                    ></AboutContents>
 
-                    <AboutContents
-                        title={this.state.title3}
-                        content={this.state.content3}
-                        titleId={this.state.titleId3}
-                        contentId={this.state.contentId3}
-                    ></AboutContents>
+
+
+
+                    <div className="row row-add">
+                        <div className="col-sm-12">
+                            <div className="main_about text-center">
+                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.title1}></MessageBox>
+                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.content1}></MessageBox>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="row row-add">
+                        <div className="col-sm-12">
+                            <div className="main_about text-center">
+                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.title2}></MessageBox>
+                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.content2}></MessageBox>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="row row-add">
+                        <div className="col-sm-12">
+                            <div className="main_about text-center">
+                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.title3}></MessageBox>
+                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.content3}></MessageBox>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </section>
 

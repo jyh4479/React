@@ -1,0 +1,16 @@
+.edit-mode:hover{
+    border:1px dashed #666;
+    background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+.button-style{
+    color: white;
+    background-color: orange;
+    border: 2px solid orange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.button-style:hover{
+    background-color: #5cb85c;
+}
