@@ -1,0 +1,88 @@
+.content-wrapper {
+    padding: 3rem 4rem;
+    margin: 2rem;
+}
+
+/*We are fixing a menu and pulling them out of the screen by negative 'left'*/
+
+.side-menu {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    position: fixed;
+    left: -140px;
+    top: 200px;
+    opacity: .95;
+    overflow: hidden;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+/*We need to hide the default input box*/
+
+#menu-button {
+    display: none;
+}
+
+/*if checkbox is checked next sibling's .side menu child slides in*/
+
+#menu-button:checked + .menu-wrap .side-menu {
+    left: 0px;
+    top: 200px;
+}
+
+/*this is the label for the checkbox which act as a button for our menu*/
+
+.menu-button--label {
+    color: black;
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 0;
+    cursor: pointer;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+/*Fancy rotation effect for our menu button. It rotates back when mouse leaves it */
+
+.menu-button--label:hover {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+/*We are giving the li item a shorter width to activate 'pop-out' effect when you hover*/
+
+.side-menu--list li {
+    font-size: 0;
+    width: 130px;
+
+}
+.side-menu--list a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    height: 2rem;
+    line-height: 2rem;
+    background: #333;
+    padding-left: 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+    text-align: left;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.side-menu--list a:hover{
+    background-color: orange;
+}
+
+.side-menu--list {
+    list-style: none;
+    padding-left: 0;
+}

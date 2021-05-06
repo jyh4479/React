@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import './FeatureSection.css';
 
 class FeatureSection extends Component{
     render(){
@@ -11,21 +12,22 @@ class FeatureSection extends Component{
                             <div className="col-md-5">
                                 <div className="features_item">
                                     <div className="head_title">
-                                        <h2 className="text-uppercase">Our <strong>Featured</strong></h2>
+                                        <h2 className="text-uppercase">About <strong>Me</strong></h2>
+                                        <img src="assets/images/test-image2.jpg" alt className="img-circle img-location"/>
                                     </div>
-                                    <div className="featured_content">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit donec fringilla
-                                            iaculis facilisis
-                                            morbi nulla lectus, luctus interdum eu ultricies ac tortor maecenas nec
-                                            massa sit
-                                            amet erat condimentum porttitor ac quis turpis.</p>
+                                    {/*<div className="featured_content">*/}
+                                    {/*    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit donec fringilla*/}
+                                    {/*        iaculis facilisis*/}
+                                    {/*        morbi nulla lectus, luctus interdum eu ultricies ac tortor maecenas nec*/}
+                                    {/*        massa sit*/}
+                                    {/*        amet erat condimentum porttitor ac quis turpis.</p>*/}
 
-                                        <a href="" className="btn btn-default m-top-40">Read More</a>
-                                    </div>
+                                    {/*    <a href="" className="btn btn-default m-top-40">Read More</a>*/}
+                                    {/*</div>*/}
                                 </div>
                             </div>
 
-                            <div className="col-md-6 col-md-offset-1 sm-m-top-50">
+                            <div className="col-md-6 col-md-offset-1 features-location">
                                 <div className="features_item2_area">
                                     <div className="features_item2 text-center">
                                         <div className="divider_horizontal"></div>

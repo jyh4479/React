@@ -10,6 +10,8 @@ import Footer from "./Components/Footer/Footer";
 import TestSection from "./Components/TestSection/TestSection";
 import Loading from "./Components/Loading/Loading";
 
+import QuickMenu from "./Components/QuickMenu/QuickMenu";
+
 function App() {
   return (
       <>
@@ -25,6 +27,8 @@ function App() {
               <PortfolioSection></PortfolioSection>
               <TestSection></TestSection>
               <Footer></Footer>
+
+              <QuickMenu></QuickMenu>
           </div>
       </>
   );
