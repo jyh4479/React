@@ -5,8 +5,7 @@ import MessageBox from "../../MyComponents/MessageBox";
 
 function mapReduxStateToReactProps(state){
     return{
-        homeMessage:state.homeMessage,
-        homeContent:state.homeContent
+        homeSectionData:state.homeSectionData
     };
 }
 
@@ -15,8 +14,8 @@ class HomeSection extends Component{
         super(props);
 
         this.state={
-            homeMessage:this.props.homeMessage,
-            homeContent:this.props.homeContent,
+            homeMessage:this.props.homeSectionData.homeMessage,
+            homeContent:this.props.homeSectionData.homeContent
         }
     }
 

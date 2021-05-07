@@ -1,0 +1,19 @@
+{
+  "dataList": [
+    {
+      "id": 0,
+      "title": "Values",
+      "content": "메세지1"
+    },
+    {
+      "id": 1,
+      "title": "Goals",
+      "content": "메세지2"
+    },
+    {
+      "id": 2,
+      "title": "Hobbies",
+      "content": "메세지3"
+    }
+  ]
+}

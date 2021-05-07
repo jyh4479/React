@@ -1,0 +1,27 @@
+{
+  "mainimagePath":"assets/images/test-image2.jpg",
+  "mainmessage": "About Me",
+
+  "containerData":[
+    {
+      "id": 0,
+      "imagePath": "assets/images/featured1.jpg",
+      "message": "메세지1"
+    },
+    {
+      "id": 1,
+      "imagePath": "assets/images/featured2.jpg",
+      "message": "메세지2"
+    },
+    {
+      "id": 2,
+      "imagePath": "assets/images/featured3.jpg",
+      "message": "메세지3"
+    },
+    {
+      "id": 3,
+      "imagePath": "assets/images/featured4.jpg",
+      "message": "메세지4"
+    }
+  ]
+}

@@ -1,7 +1,26 @@
 import React, {Component} from "react";
 import './FeatureSection.css';
+import {connect} from "react-redux";
+
+import ImageContainer from "../../MyComponents/ImageContainer";
+import MessageBox from "../../MyComponents/MessageBox";
+import ImageCircle from "../../MyComponents/ImageCircle";
+
+function mapReduxStateToReactProps(state){
+    return{
+        featureSectionData:state.featureSectionData
+    };
+}
 
 class FeatureSection extends Component{
+    constructor(props) {
+        super(props);
+        this.state={
+            mainImage:this.props.featureSectionData.mainimagePath,
+            mainMessage:this.props.featureSectionData.mainmessage,
+            containerDataList:this.props.featureSectionData.containerData
+        }
+    }
     render(){
         return(
             <section id="features" className="features bg-white">
@@ -12,54 +31,29 @@ class FeatureSection extends Component{
                             <div className="col-md-5">
                                 <div className="features_item">
                                     <div className="head_title">
-                                        <h2 className="text-uppercase">About <strong>Me</strong></h2>
-                                        <img src="assets/images/test-image2.jpg" alt className="img-circle img-location"/>
-                                    </div>
-                                    {/*<div className="featured_content">*/}
-                                    {/*    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit donec fringilla*/}
-                                    {/*        iaculis facilisis*/}
-                                    {/*        morbi nulla lectus, luctus interdum eu ultricies ac tortor maecenas nec*/}
-                                    {/*        massa sit*/}
-                                    {/*        amet erat condimentum porttitor ac quis turpis.</p>*/}
 
-                                    {/*    <a href="" className="btn btn-default m-top-40">Read More</a>*/}
-                                    {/*</div>*/}
-                                </div>
-                            </div>
 
-                            <div className="col-md-6 col-md-offset-1 features-location">
-                                <div className="features_item2_area">
-                                    <div className="features_item2 text-center">
-                                        <div className="divider_horizontal"></div>
-                                        <div className="divider_vertical"></div>
-                                        <div className="col-xs-6">
-                                            <div className="features_item_text">
-                                                <img src="assets/images/featured1.jpg" alt="" className="img-circle"/>
-                                                <p className="m-top-20">Trending Design</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-xs-6">
-                                            <div className="features_item_text">
-                                                <img src="assets/images/featured2.jpg" alt="" className="img-circle"/>
-                                                <p className="m-top-20">Easy to Customize</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-xs-6">
-                                            <div className="features_item_text m-top-50">
-                                                <img src="assets/images/featured3.jpg" alt="" className="img-circle"/>
-                                                <p className="m-top-20">Responsive Design</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-xs-6">
-                                            <div className="features_item_text m-top-50">
-                                                <img src="assets/images/featured4.jpg" alt="" className="img-circle"/>
-                                                <p className="m-top-20">Free Google Font</p>
-                                            </div>
-                                        </div>
+
+
+                                        {/*<h2 className="text-uppercase">About <strong>Me</strong></h2>*/}
+                                        <MessageBox type={'title'} textColor={'text-black'} message={this.state.mainMessage}></MessageBox>
+                                        <ImageCircle imagePath={"assets/images/test-image2.jpg"}></ImageCircle>
+
+
+
 
                                     </div>
                                 </div>
                             </div>
+
+
+                            <div className="features-location">
+                                <ImageContainer
+                                    dataList={this.state.containerDataList}
+                                ></ImageContainer>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -67,4 +61,4 @@ class FeatureSection extends Component{
         )
     }
 }
-export default FeatureSection;
+export default connect(mapReduxStateToReactProps) (FeatureSection);

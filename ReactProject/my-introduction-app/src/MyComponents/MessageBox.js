@@ -1,3 +1,16 @@
+/*
+
+<MessageBox
+    tpye={'title'}  메세지 박스가 쓰일 타입 (제목 or 내용) {'title', 'content'}
+    textColor={'text-black'} 메세지의 색을 정의 {'text-black', 'text-yellow' ...}
+    message={this.state.content1} 작성할 메세지 정의 {사용자 지정}
+    
+    ..추후 추가예정
+    
+></MessageBox>
+
+*/
+
 import React,{Component} from "react";
 import './MessageBox.css';
 

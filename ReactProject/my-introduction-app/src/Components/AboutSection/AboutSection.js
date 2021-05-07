@@ -1,83 +1,47 @@
 import React, {Component} from "react";
-import AboutContents from "./AboutContents";
 import './AboutSection.css'
+import {connect} from "react-redux";
 import MessageBox from "../../MyComponents/MessageBox";
 
 import Draggable from 'react-draggable';
 
+function mapReduxStateToReactProps(state){
+    return{
+        aboutSectionData:state.aboutSectionData
+    };
+}
+
 class AboutSection extends Component{
     constructor(props) {
         super(props);
-
         this.state={
-            titleId1:"t1",
-            titleId2:"t2",
-            titleId3:"t3",
-
-            contentId1:"c1",
-            contentId2:"c2",
-            contentId3:"c3",
-
-            title1:"Values",
-            title2:"Goals",
-            title3:"Hobbies",
-
-            content1:"멘트생각하기",
-            content2:"멘트생각하기",
-            content3:"멘트생각하기"
+            dataList:this.props.aboutSectionData.dataList
         }
     }
 
     render(){
-        const viewStyle={
-            display: 'block',
-        }
-        const editStyle={
-            display: 'none'
-        }
-
         return(
             <>
-            <section id="about" className="about bg-yellow roomy-80">
-                <div className="container container-add">
+                <section id="about" className="about bg-yellow roomy-80">
+                    <div className="container container-add">
 
 
-
-
-
-                    <div className="row row-add">
-                        <div className="col-sm-12">
-                            <div className="main_about text-center">
-                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.title1}></MessageBox>
-                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.content1}></MessageBox>
+                        {this.state.dataList.map(data=>
+                            <div className="row row-add">
+                                <div className="col-sm-12">
+                                    <div className="main_about text-center">
+                                        <MessageBox tpye={'title'} textColor={'text-black'} message={data.title}></MessageBox>
+                                        <MessageBox tpye={'title'} textColor={'text-black'} message={data.content}></MessageBox>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        )}
+
+
+
+
                     </div>
-
-
-                    <div className="row row-add">
-                        <div className="col-sm-12">
-                            <div className="main_about text-center">
-                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.title2}></MessageBox>
-                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.content2}></MessageBox>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div className="row row-add">
-                        <div className="col-sm-12">
-                            <div className="main_about text-center">
-                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.title3}></MessageBox>
-                                <MessageBox tpye={'title'} textColor={'text-black'} message={this.state.content3}></MessageBox>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </section>
+                </section>
 
                 {/*<Draggable*/}
                 {/*    axis="x"*/}
@@ -99,4 +63,4 @@ class AboutSection extends Component{
         )
     }
 }
-export default AboutSection;
+export default connect(mapReduxStateToReactProps) (AboutSection);
