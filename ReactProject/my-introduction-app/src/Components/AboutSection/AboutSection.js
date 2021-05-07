@@ -20,25 +20,29 @@ class AboutSection extends Component{
     }
 
     render(){
+
+        const dataList = this.state.dataList;
+        let viewData=[];
+
+        dataList.forEach(function (data){
+            viewData.push(
+                <div className="row row-add">
+                    <div className="col-sm-12">
+                        <div className="main_about text-center">
+                            <MessageBox tpye={'title'} textColor={'text-black'} message={data.title}></MessageBox>
+                            <MessageBox tpye={'title'} textColor={'text-black'} message={data.content}></MessageBox>
+                        </div>
+                    </div>
+                </div>
+            )
+        });
+
         return(
             <>
                 <section id="about" className="about bg-yellow roomy-80">
                     <div className="container container-add">
 
-
-                        {this.state.dataList.map(data=>
-                            <div className="row row-add">
-                                <div className="col-sm-12">
-                                    <div className="main_about text-center">
-                                        <MessageBox tpye={'title'} textColor={'text-black'} message={data.title}></MessageBox>
-                                        <MessageBox tpye={'title'} textColor={'text-black'} message={data.content}></MessageBox>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-
-
+                        {viewData}
 
                     </div>
                 </section>

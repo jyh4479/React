@@ -3,6 +3,7 @@ import {createStore} from 'redux';
 import homeSectionData from "./Data/HomeSection.json";
 import featureSectionData from "./Data/FeatureSection.json";
 import aboutSectionData from "./Data/AboutSection.json";
+import serviceSectionData from "./Data/ServiceSection.json";
 
 export default createStore(function(state,action){
     if(state===undefined){
@@ -15,6 +16,9 @@ export default createStore(function(state,action){
 
             /* --- FeatureSection --- */
             featureSectionData:featureSectionData,
+
+            /* --- ServiceSection --- */
+            serviceSectionData:serviceSectionData,
         }
     }
 

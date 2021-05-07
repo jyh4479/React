@@ -1115,6 +1115,10 @@ Featured section style
     padding: 70px 30px;
 }
 
+.service_slid_text{
+    text-align: center;
+}
+
 .service_slid .service_slid_text span.icon{
     font-size:8rem;
 }

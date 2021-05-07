@@ -1,43 +1,39 @@
 import React, {Component} from "react";
-import ImageCircle from "../../MyComponents/ImageCircle";
-import MessageBox from "../../MyComponents/MessageBox";
+import {connect} from "react-redux";
+import ImageSlider from "../../MyComponents/ImageSlider";
+
+function mapReduxStateToReactProps(state){
+    return{
+        serviceSectionData:state.serviceSectionData
+    };
+}
 
 class ServiceSection extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            sliderData: this.props.serviceSectionData.sliderData
+        }
+    }
+
     render(){
         return(
             <section id="service" className="service bg-grey roomy-70">
                 <div className="container">
                     <div className="row">
                         <div className="main_service">
-
-
-
-
-
                             <div className="col-md-6">
-                                <div className="service_slid">
-                                    <div className="slid_shap bg-yellow"></div>
-                                    <div className="service_slid_item text-center">
-                                        <div className="service_slid_text">
-                                            <ImageCircle imagePath={"assets/images/test-image2.jpg"}></ImageCircle>
-                                            <MessageBox type={'title'} textColor={'text-black'} message={"Test Message"}></MessageBox>
-                                            {/*<span className="icon icon icon-tools text-black"></span>*/}
-                                            {/*<h5 className="text-black m-top-20">UI/UX Design</h5>*/}
-                                        </div>
-                                        <div className="service_slid_text">
-                                            <span className="icon icon icon-sports-2 text-black"></span>
-                                            <h5 className="text-black m-top-20">UI/UX Design</h5>
-                                        </div>
-                                    </div>
-                                </div>
+
+
+
+
+                                <ImageSlider dataList={this.state.sliderData}></ImageSlider>
+
+
+
+
+
                             </div>
-
-
-
-
-
-
-
                             <div className="col-md-5 col-md-offset-1">
                                 <div className="service_item sm-m-top-50">
                                     <div className="head_title">
@@ -65,4 +61,4 @@ class ServiceSection extends Component{
         )
     }
 }
-export default ServiceSection;
+export default connect(mapReduxStateToReactProps)(ServiceSection);
