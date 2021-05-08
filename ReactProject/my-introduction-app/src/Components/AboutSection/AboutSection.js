@@ -29,8 +29,8 @@ class AboutSection extends Component{
                 <div className="row row-add">
                     <div className="col-sm-12">
                         <div className="main_about text-center">
-                            <MessageBox tpye={'title'} textColor={'text-black'} message={data.title}></MessageBox>
-                            <MessageBox tpye={'title'} textColor={'text-black'} message={data.content}></MessageBox>
+                            <MessageBox addClassName="aboutTitle" message={data.title}></MessageBox>
+                            <MessageBox addClassName="aboutContent" message={data.content}></MessageBox>
                         </div>
                     </div>
                 </div>

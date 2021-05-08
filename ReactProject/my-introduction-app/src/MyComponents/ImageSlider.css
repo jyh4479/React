@@ -1,3 +1,70 @@
 .image-location{
     margin: auto;
 }
+
+.slid_shap{
+    height: 40px;
+    border-radius: 4px 4px 0px 0px;
+    background-color: #fddc57;
+    width:100%;
+}
+
+
+
+.service_slid {
+    box-shadow: 0px 0px 8px -1px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.service_slid .service_slid_item{
+    background-color: #fff;
+    padding: 70px 30px;
+}
+
+.service_slid .service_slid_text span.icon{
+    font-size:8rem;
+}
+
+.service_slid .service_slid_text h5{
+    font-size:18px;
+    font-weight: 700;
+}
+
+.choose_mac .slick-arrow,
+.service_slid .slick-arrow{
+    position: absolute;
+    top:40%;
+    z-index: 1;
+    border-radius: 50%;
+    border:1px solid #ddd;
+    width:25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size:10px;
+    cursor:pointer;
+}
+
+.choose_mac .nextprevleft,
+.service_slid .nextprevleft{
+    left:5%;
+}
+
+.choose_mac .nextprevright,
+.service_slid .nextprevright{
+    right:5%;
+}
+
+
+
+
+.service_slid_text{
+    text-align: center;
+}
+.service_slid .service_slid_text span.icon{
+    font-size:8rem;
+}
+.service_slid .service_slid_text h5{
+    font-size:18px;
+    font-weight: 700;
+}

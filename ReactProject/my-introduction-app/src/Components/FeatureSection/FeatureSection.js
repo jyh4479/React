@@ -30,19 +30,18 @@ class FeatureSection extends Component{
 
                             <div className="col-md-5">
                                 <div className="features_item">
-                                    <div className="head_title">
+
 
 
 
 
                                         {/*<h2 className="text-uppercase">About <strong>Me</strong></h2>*/}
-                                        <MessageBox type={'title'} textColor={'text-black'} message={this.state.mainMessage}></MessageBox>
+                                        <MessageBox addClassName="featureHeadTitle" message={this.state.mainMessage}></MessageBox>
                                         <ImageCircle imagePath={"assets/images/test-image2.jpg"}></ImageCircle>
 
 
 
 
-                                    </div>
                                 </div>
                             </div>
 

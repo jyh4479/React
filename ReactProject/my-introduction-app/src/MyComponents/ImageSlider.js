@@ -7,7 +7,7 @@ const ImageSlider = () => {
     return(
         <>
             <div className="service_slid">
-                <div className="slid_shap bg-yellow"></div>
+                <div className="slid_shap"></div>
                 <div className="service_slid_item text-center">
                     <div className="service_slid_text">
                         <ImageCircle addClassName="image-location" imagePath={"assets/images/test-image2.jpg"}></ImageCircle>

@@ -1,10 +1,13 @@
 /*
 
+..
 <MessageBox
-    tpye={'title'}  메세지 박스가 쓰일 타입 (제목 or 내용) {'title', 'content'}
+
+    id={~} input박스의 정보를 알려줘야하는 기능이 있어서 고유식별 id가 필요하다
+    addClassName={~}  메세지 Styl에 사용될 class를 받는 props
     textColor={'text-black'} 메세지의 색을 정의 {'text-black', 'text-yellow' ...}
-    message={this.state.content1} 작성할 메세지 정의 {사용자 지정}
-    
+    message={~} 작성할 메세지 정의 {사용자 지정}
+
     ..추후 추가예정
     
 ></MessageBox>
@@ -76,9 +79,13 @@ class MessageBox extends Component{
 
         return(
             <>
-                <div className="edit-mode" style={messageStyle}><a className={`${this.props.addClassName}`} onClick={editEvent}>{this.props.message}</a></div>
+                {/*위치 수정은 draggable로 구현해보기*/}
+                <div className="edit-mode" style={messageStyle}>
+                    <a className={`${this.props.addClassName}`} onClick={editEvent}>{this.props.message}</a>
+                </div>
+
                 <div style={inputStyle}>
-                    <input type="text" id="input" className={`edit-box ${this.props.addClassName}`} onKeyPress={enterEvent} placeholder={this.props.message}></input>
+                    <input type="text" id={this.props.id} className={`edit-box ${this.props.addClassName}`} onKeyPress={enterEvent} placeholder={this.props.message}></input>
                     <div className="button-location">
                         <button className="button-style" onClick={changeEvent}>수정</button>
                         <button className="button-style" style={{borderLeftColor: 'white'}} onClick={cancelEvent}>취소</button>

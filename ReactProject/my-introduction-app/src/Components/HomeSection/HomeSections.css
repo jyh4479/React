@@ -3,10 +3,12 @@
     font-family: 'Kaushan Script', cursive;
     line-height: 105px;
     color: #fddc57;
+    text-align: center;
 }
 
 .subMessageStyle{
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
     color:white;
+    text-align: center;
 }
