@@ -39,8 +39,8 @@ class HomeSection extends Component{
 
 
 
-                                            <MessageBox tpye={'title'} textColor={"text-yellow"} message={this.state.homeMessage}></MessageBox>
-                                            <MessageBox tpye={'title'} textColor={"text-black"} message={this.state.homeContent}></MessageBox>
+                                            <MessageBox addClassName={"homeMessageStyle"} textColor={"text-yellow"} message={this.state.homeMessage}></MessageBox>
+                                            <MessageBox addClassName={"subMessageStyle"} textColor={"text-black"} message={this.state.homeContent}></MessageBox>
 
 
 

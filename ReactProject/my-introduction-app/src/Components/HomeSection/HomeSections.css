@@ -1,3 +1,12 @@
-.home_text{
-    position: relative;
+.homeMessageStyle{
+    font-size: 100px;
+    font-family: 'Kaushan Script', cursive;
+    line-height: 105px;
+    color: #fddc57;
+}
+
+.subMessageStyle{
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
 }

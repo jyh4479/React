@@ -54,7 +54,6 @@ class MessageBox extends Component{
 
     render(){
         const {editEvent, changeEvent, cancelEvent, enterEvent, event} = this;
-        let type=this.props.messageType;
 
         const viewStyle={
             display: 'block',
@@ -77,9 +76,9 @@ class MessageBox extends Component{
 
         return(
             <>
-                <div className="edit-mode" style={messageStyle}><a className={this.props.textColor} onClick={editEvent}>{this.props.message}</a></div>
+                <div className="edit-mode" style={messageStyle}><a className={`${this.props.addClassName}`} onClick={editEvent}>{this.props.message}</a></div>
                 <div style={inputStyle}>
-                    <input type="text" id="input" className="edit-box" onKeyPress={enterEvent} placeholder={this.props.message}></input>
+                    <input type="text" id="input" className={`edit-box ${this.props.addClassName}`} onKeyPress={enterEvent} placeholder={this.props.message}></input>
                     <div className="button-location">
                         <button className="button-style" onClick={changeEvent}>수정</button>
                         <button className="button-style" style={{borderLeftColor: 'white'}} onClick={cancelEvent}>취소</button>
