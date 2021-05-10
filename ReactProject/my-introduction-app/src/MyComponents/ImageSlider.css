@@ -2,7 +2,14 @@
     margin: auto;
 }
 
-.slid_shap{
+.sliderText{
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.slid_shape{
     height: 40px;
     border-radius: 4px 4px 0px 0px;
     background-color: #fddc57;

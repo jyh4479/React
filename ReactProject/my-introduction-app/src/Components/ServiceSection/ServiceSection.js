@@ -1,6 +1,9 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
+
+import MessageBox from "../../MyComponents/MessageBox";
 import ImageSlider from "../../MyComponents/ImageSlider";
+import './ServiceSection.css';
 
 function mapReduxStateToReactProps(state){
     return{
@@ -12,11 +15,25 @@ class ServiceSection extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            sliderData: this.props.serviceSectionData.sliderData
+            sliderData: this.props.serviceSectionData.sliderData,
+            mainTitle: this.props.serviceSectionData.mainTitle,
+            mainMessageList: this.props.serviceSectionData.mainMessageList
         }
     }
 
     render(){
+
+        const dataList=this.state.mainMessageList;
+        let viewData=[];
+
+        dataList.forEach((data)=>{
+            viewData.push(
+                <div className="m-top-10">
+                    <MessageBox addClassName="serviceMessage" message={data.message}></MessageBox>
+                </div>
+            )
+        });
+
         return(
             <section id="service" className="service bg-grey roomy-70">
                 <div className="container">
@@ -34,18 +51,22 @@ class ServiceSection extends Component{
 
 
                             </div>
+
+
+
                             <div className="col-md-5 col-md-offset-1">
                                 <div className="service_item sm-m-top-50">
-                                    <div className="head_title">
-                                        <h2 className="text-uppercase">Our <strong>Service</strong></h2>
-                                    </div>
-                                    <div className="service_content">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit donec fringilla iaculis facilisis
-                                            morbi nulla lectus, luctus interdum eu ultricies ac tortor maecenas nec massa sit
-                                            amet erat condimentum porttitor ac quis turpis.</p>
 
-                                        <a href="" className="btn btn-default m-top-40">Read More</a>
+
+                                    <MessageBox addClassName="serviceHeadTitle" message={this.state.mainTitle}></MessageBox>
+                                    <div className="m-top-40">
+                                        {viewData}
                                     </div>
+
+
+
+
+
                                 </div>
                             </div>
 

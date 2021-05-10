@@ -5,7 +5,6 @@
 
     id={~} input박스의 정보를 알려줘야하는 기능이 있어서 고유식별 id가 필요하다
     addClassName={~}  메세지 Styl에 사용될 class를 받는 props
-    textColor={'text-black'} 메세지의 색을 정의 {'text-black', 'text-yellow' ...}
     message={~} 작성할 메세지 정의 {사용자 지정}
 
     ..추후 추가예정

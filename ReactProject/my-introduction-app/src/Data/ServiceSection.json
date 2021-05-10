@@ -2,23 +2,43 @@
   "sliderData": [
     {
       "id": 0,
-      "imagePath": "",
-      "message": ""
+      "imagePath": "assets/images/test-image3.jpg",
+      "message": "메세지1"
     },
     {
       "id": 1,
-      "imagePath": "",
-      "message": ""
+      "imagePath": "assets/images/test-image3.jpg",
+      "message": "메세지2"
     },
     {
       "id": 2,
-      "imagePath": "",
-      "message": ""
+      "imagePath": "assets/images/test-image3.jpg",
+      "message": "메세지3"
     },
     {
       "id": 3,
-      "imagePath": "",
-      "message": ""
+      "imagePath": "assets/images/test-image3.jpg",
+      "message": "메세지4"
+    }
+  ],
+
+  "mainTitle": "My Skills",
+  "mainMessageList": [
+    {
+      "id": 4,
+      "message": "간략한 skills 설명 메세지입니다."
+    },
+    {
+      "id": 5,
+      "message": "1. 저는 ~~를 ~~해봤고 ~~할수있습니다."
+    },
+    {
+      "id": 6,
+      "message": "2. 저는 ~~를 ~~해봤고 ~~할수있습니다."
+    },
+    {
+      "id": 7,
+      "message": "3. 저는 ~~를 ~~해봤고 ~~할수있습니다."
     }
   ]
 }

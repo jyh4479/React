@@ -14,3 +14,5 @@ class ImageCircle extends Component{
     }
 }
 export default ImageCircle;
+
+//각각 나눈 컴포넌트에 대한 예외 처리가 중요하다

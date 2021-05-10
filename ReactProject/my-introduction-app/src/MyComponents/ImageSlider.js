@@ -3,18 +3,29 @@ import ImageCircle from "./ImageCircle";
 import MessageBox from "./MessageBox";
 import './ImageSlider.css';
 
-const ImageSlider = () => {
+const ImageSlider = (props) => {
+    let dataList=props.dataList;
+    let viewData=[];
+
+    dataList.forEach((data)=>{
+        viewData.push(
+            <div className="service_slid_text">
+                <ImageCircle addClassName="image-location" imagePath={data.imagePath}></ImageCircle>
+                <MessageBox addClassName="sliderText" message={data.message}></MessageBox>
+            </div>
+        )
+    });
+
     return(
         <>
             <div className="service_slid">
-                <div className="slid_shap"></div>
+                <div className="slid_shape"></div>
                 <div className="service_slid_item text-center">
-                    <div className="service_slid_text">
-                        <ImageCircle addClassName="image-location" imagePath={"assets/images/test-image2.jpg"}></ImageCircle>
-                        <MessageBox type={'title'} textColor={'text-black'} message={"Test Message"}></MessageBox>
+
+                        {viewData}
                         {/*<span className="icon icon icon-tools text-black"></span>*/}
                         {/*<h5 className="text-black m-top-20">UI/UX Design</h5>*/}
-                    </div>
+
                     {/*<div className="service_slid_text">*/}
                     {/*    <span className="icon icon icon-sports-2 text-black"></span>*/}
                     {/*    <h5 className="text-black m-top-20">UI/UX Design</h5>*/}

@@ -21,8 +21,8 @@ function App() {
               <HomeSection></HomeSection>
               <AboutSection></AboutSection>
               <FeatureSection></FeatureSection>
-              <ServiceSection></ServiceSection>
               <TeamSection></TeamSection> {/* JSX는 style을 줄때 형식이 있음 ex {{~~~:"~~~"}}*/}
+              <ServiceSection></ServiceSection>
               <ChooseSection></ChooseSection>
               <PortfolioSection></PortfolioSection>
               <TestSection></TestSection>

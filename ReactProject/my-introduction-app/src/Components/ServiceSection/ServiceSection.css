@@ -1,0 +1,15 @@
+.serviceHeadTitle{
+    overflow: hidden;
+
+    font-weight: 400;
+    font-size:2.250rem;
+    color:#16293b;
+    border-left:3px solid #fddc57;
+    padding-left:15px;
+}
+
+.serviceMessage{
+    color: #797979;
+    font-size: 16px;
+    font-width: 400;
+}

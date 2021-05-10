@@ -40,7 +40,9 @@ class HomeSection extends Component{
 
 
                                             <MessageBox addClassName={"homeMessageStyle"} message={this.state.homeMessage}></MessageBox>
-                                            <MessageBox addClassName={"subMessageStyle"} message={this.state.homeContent}></MessageBox>
+                                            <div className="m-top-30">
+                                                <MessageBox addClassName={"subMessageStyle"} message={this.state.homeContent}></MessageBox>
+                                            </div>
 
 
 

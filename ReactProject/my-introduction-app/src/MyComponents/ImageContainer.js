@@ -1,34 +1,69 @@
-import React,{Component} from "react";
+import React,{useState,useEffect} from "react";
 import MessageBox from "./MessageBox";
 import ImageCircle from "./ImageCircle";
 
 import './ImageContainer.css';
+/*
 
-class ImageContainer extends Component {
-    constructor(props) {
-        super(props);
-    }
+useState
+useEffect
+useMemo
 
-    render() {
+*/
+const ImageContainer = (props) =>{
+    let dataList=props.dataList;
+    let viewData = [];
 
-        const dataList = this.props.dataList;
-        let viewData = [];
+    dataList.forEach((data) => {
+        viewData.push(
+            <div className="col-xs-6">
+                <div className="features_item_text item-location">
+                    <ImageCircle imagePath={data.imagePath}></ImageCircle>
+                    <div className={"m-top-10"}>
+                        <MessageBox addClassName="text-black containerText" message={data.message}></MessageBox>
+                    </div>
+                </div>
+            </div>
+        )
+    });
 
-        dataList.forEach(function (data) {
-            viewData.push(
+    return (
+        <>{viewData}</>
+    )
+}
+export default ImageContainer;
 
+/*
+
+for ...in
+
+for ...of
+
+forEach
+
+
+
+        for(let value of dataList){
+            testData.push(
                 <div className="col-xs-6">
                     <div className="features_item_text item-location">
-                        <ImageCircle imagePath={data.imagePath}></ImageCircle>
-                        <MessageBox type={'content'} textColor={'text-black'} message={data.message}></MessageBox>
+                        <ImageCircle imagePath={value.imagePath}></ImageCircle>
+                        <MessageBox type={'content'} textColor={'text-black'} message={value.message}></MessageBox>
                     </div>
                 </div>
             )
-        });
+        }
 
-        return (
-            <>{viewData}</>
-        )
-    }
-}
-export default ImageContainer;
+        for(let prop in dataList){
+            console.log(prop)
+            testData2.push(
+                <div className="col-xs-6">
+                    <div className="features_item_text item-location">
+                        <ImageCircle imagePath={dataList[prop].imagePath}></ImageCircle>\n' +
+                        '                        <MessageBox type={\'content\'} textColor={\'text-black'} message={dataList[prop].message}></MessageBox>
+                    </div>
+                </div>
+            )
+        }
+
+*/
