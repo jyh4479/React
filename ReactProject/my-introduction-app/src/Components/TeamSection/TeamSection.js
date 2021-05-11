@@ -17,22 +17,31 @@ class TeamSection extends Component{
         super(props);
         this.state={
             mainTitle:props.teamSectionData.mainTitle,
-            mainMessage:props.teamSectionData.mainMessageList,
+            mainMessage:props.teamSectionData.mainComment,
+
             dataList:props.teamSectionData.dataList
         }
     }
     render(){
 
-        const dataList=this.state.mainMessage;
-        let viewData=[];
+        const dataList=this.state.dataList;
+        let contentData=[];
         let bottomViewData=[];
 
-        dataList.forEach((data)=>{
-            viewData.push(
-                <div className="m-top-10">
-                    <MessageBox addClassName="teamMessage" message={data.message}></MessageBox>
+        /* --- left side Data --- */
+        contentData.push(
+            <MessageBox addClassName="teamMessage teamSubTitle" message={this.state.mainMessage}></MessageBox>
+        )
+        dataList.forEach((data, index)=> {
+            contentData.push(
+                <div className="m-top-20">
+                    <MessageBox addClassName="teamMessage" message={data.contentMessage}></MessageBox>
                 </div>
             )
+        /* --- left side Data --- */
+
+
+
         });
 
 
@@ -53,7 +62,7 @@ class TeamSection extends Component{
 
                                     <MessageBox addClassName="teamHeadTitle" message={this.state.mainTitle}></MessageBox>
                                     <div className="m-top-40">
-                                        {viewData}
+                                        {contentData}
                                     </div>
 
 
@@ -65,8 +74,8 @@ class TeamSection extends Component{
 
 
 
-                            <div className={"teamContentLocation m-top-20"}>
-                                <ImageContainer dataList={this.state.dataList}></ImageContainer>
+                            <div className={"teamContentLocation m-top-80"}>
+                                <ImageContainer textShape="teamImageMessage" imageShape="img-circle" dataList={this.state.dataList}></ImageContainer>
                             </div>
 
 
@@ -120,23 +129,27 @@ class TeamSection extends Component{
 
 
                         </div>
-
                         <div className="col-md-12">
                             <div className="skill">
-                                <div className="team_content_details_skills m-top-50">
+                                <div className="team_content_details_skills m-top-20">
                                     <div className="row">
+
+
+
+
+
+
+
                                         <div className="col-sm-6">
                                             <div className="teamskillbar clearfix m-top-50"
                                                  data-percent="80%">
                                                 <MessageBox addClassName={"bottomTextStyle"} message={"KwangWoon .Univ"}></MessageBox>
-                                                <div className="teamskillbar-bar" style={{width:'80%'}}></div>
                                             </div>
 
 
-                                            <div className="teamskillbar clearfix m-top-50"
+                                            <div className="teamskillbar clearfix m-top-60"
                                                  data-percent="75%">
                                                 <MessageBox addClassName={"bottomTextStyle"} message={"KOLON .Corp"}></MessageBox>
-                                                <div className="teamskillbar-bar" style={{width:'75%'}}></div>
                                             </div>
 
                                         </div>
@@ -145,17 +158,20 @@ class TeamSection extends Component{
                                             <div className="teamskillbar clearfix m-top-50"
                                                  data-percent="90%">
                                                 <MessageBox addClassName={"bottomTextStyle"} message={"NAVER .Corp"}></MessageBox>
-                                                <div className="teamskillbar-bar" style={{width:'90%'}}></div>
                                             </div>
 
 
-                                            <div className="teamskillbar clearfix m-top-50"
+                                            <div className="teamskillbar clearfix m-top-60"
                                                  data-percent="98%">
                                                 <MessageBox addClassName={"bottomTextStyle"} message={"-"}></MessageBox>
-                                                <div className="teamskillbar-bar" style={{width:'98%'}}></div>
                                             </div>
 
                                         </div>
+
+
+
+
+
 
                                     </div>
                                 </div>

@@ -10,8 +10,10 @@ const ImageSlider = (props) => {
     dataList.forEach((data)=>{
         viewData.push(
             <div className="service_slid_text">
-                <ImageCircle addClassName="image-location" imagePath={data.imagePath}></ImageCircle>
-                <MessageBox addClassName="sliderText" message={data.message}></MessageBox>
+                <ImageCircle addClassName={`image-location ${props.imageShape}`} imagePath={data.imagePath}></ImageCircle>
+                <div className="m-top-20">
+                    <MessageBox addClassName={`text-black sliderText ${props.textShape}`} message={data.message}></MessageBox>
+                </div>
             </div>
         )
     });

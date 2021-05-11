@@ -12,4 +12,10 @@
     color: #797979;
     font-size: 16px;
     font-width: 400;
+    font-weight: 600;
+}
+
+.serviceSubTitle{
+    font-family: 'Kaushan Script', cursive;
+    color: black;
 }

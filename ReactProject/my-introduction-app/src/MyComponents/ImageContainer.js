@@ -18,9 +18,9 @@ const ImageContainer = (props) =>{
         viewData.push(
             <div className="col-xs-6">
                 <div className="features_item_text item-location">
-                    <ImageCircle imagePath={data.imagePath}></ImageCircle>
+                    <ImageCircle addClassName={props.imageShape} imagePath={data.imagePath}></ImageCircle>
                     <div className={"m-top-10"}>
-                        <MessageBox addClassName="text-black containerText" message={data.message}></MessageBox>
+                        <MessageBox addClassName={`text-black containerText ${props.textShape}`} message={data.message}></MessageBox>
                     </div>
                 </div>
             </div>

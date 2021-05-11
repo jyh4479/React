@@ -15,21 +15,24 @@ class ServiceSection extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            sliderData: this.props.serviceSectionData.sliderData,
+            sliderData: this.props.serviceSectionData.skillData,
             mainTitle: this.props.serviceSectionData.mainTitle,
-            mainMessageList: this.props.serviceSectionData.mainMessageList
+            mainMessage: this.props.serviceSectionData.mainMessage
         }
     }
 
     render(){
 
-        const dataList=this.state.mainMessageList;
+        const dataList=this.state.sliderData;
         let viewData=[];
 
+        viewData.push(
+            <MessageBox addClassName="serviceMessage serviceSubTitle" message={this.state.mainMessage}></MessageBox>
+        )
         dataList.forEach((data)=>{
             viewData.push(
-                <div className="m-top-10">
-                    <MessageBox addClassName="serviceMessage" message={data.message}></MessageBox>
+                <div className="m-top-20">
+                    <MessageBox addClassName="serviceMessage" message={data.contentMessage}></MessageBox>
                 </div>
             )
         });
@@ -44,7 +47,7 @@ class ServiceSection extends Component{
 
 
 
-                                <ImageSlider dataList={this.state.sliderData}></ImageSlider>
+                                <ImageSlider textShape="serviceMessage" dataList={this.state.sliderData}></ImageSlider>
 
 
 

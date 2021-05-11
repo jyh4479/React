@@ -12,6 +12,11 @@
     color: #797979;
     font-size: 16px;
     font-width: 400;
+    font-weight: 600;
+}
+.teamSubTitle{
+    font-family: 'Kaushan Script', cursive;
+    color: black;
 }
 
 .teamContentLocation{
@@ -19,14 +24,17 @@
 }
 
 .bottomTextStyle{
-    position: absolute;
-    top:-25px;
-    left: 0;
-
     display:inline-block;
     max-width: 100%;
-    margin-bottom: 5px;
     font-weight: bold;
-
     color: #797979;
+}
+
+.teamBottomMessage{
+    width:100%;
+    border:1px dotted #FF00FF;
+}
+
+.teamImageMessage{
+    font-weight: 600;
 }

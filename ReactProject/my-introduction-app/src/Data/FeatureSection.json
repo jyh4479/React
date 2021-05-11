@@ -1,27 +1,45 @@
 {
-  "mainimagePath":"assets/images/test-image2.jpg",
+  "mainimagePath":"assets/images/me.png",
   "mainmessage": "About Me",
 
   "containerData":[
     {
       "id": 0,
-      "imagePath": "assets/images/featured1.jpg",
-      "message": "메세지1"
+      "imagePath": "assets/images/name.png",
+      "message": "정용훈 (Jeongyonghoon)"
     },
     {
       "id": 1,
-      "imagePath": "assets/images/featured2.jpg",
-      "message": "메세지2"
+      "imagePath": "assets/images/live.png",
+      "message": "경기도 평택시"
     },
     {
       "id": 2,
-      "imagePath": "assets/images/featured3.jpg",
-      "message": "메세지3"
+      "imagePath": "assets/images/mail.png",
+      "message": "jyh.dev@gmail.com"
     },
     {
       "id": 3,
-      "imagePath": "assets/images/featured4.jpg",
-      "message": "메세지4"
+      "imagePath": "assets/images/github.png",
+      "message": "github.com/jyh4479"
+    }
+  ],
+
+  "containerData2":[
+    {
+      "id": 4,
+      "imagePath": "assets/images/phone.png",
+      "message": "010-xxxx-xxxx"
+    },
+    {
+      "id": 5,
+      "imagePath": "assets/images/bag.png",
+      "message": "KOLON-Benit"
+    },
+    {
+      "id": 6,
+      "imagePath": "assets/images/study.png",
+      "message": "I hope to study full-stack"
     }
   ]
 }

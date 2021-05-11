@@ -9,7 +9,7 @@ class ImageCircle extends Component{
 
     render(){
         return(
-            <img src={this.props.imagePath} className={`img-circle ${this.props.addClassName}`}/>
+            <img src={this.props.imagePath} className={this.props.addClassName}/>
         )
     }
 }

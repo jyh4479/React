@@ -18,7 +18,8 @@ class FeatureSection extends Component{
         this.state={
             mainImage:this.props.featureSectionData.mainimagePath,
             mainMessage:this.props.featureSectionData.mainmessage,
-            containerDataList:this.props.featureSectionData.containerData
+            containerDataList:this.props.featureSectionData.containerData,
+            containerDataList2:this.props.featureSectionData.containerData2
         }
     }
     render(){
@@ -37,7 +38,7 @@ class FeatureSection extends Component{
 
                                         {/*<h2 className="text-uppercase">About <strong>Me</strong></h2>*/}
                                         <MessageBox addClassName="featureHeadTitle" message={this.state.mainMessage}></MessageBox>
-                                        <ImageCircle imagePath={"assets/images/test-image2.jpg"}></ImageCircle>
+                                        <ImageCircle addClassName="img-circle m-top-20" imagePath={this.state.mainImage}></ImageCircle>
 
 
 
@@ -49,9 +50,16 @@ class FeatureSection extends Component{
                             <div className="features-location">
                                 <ImageContainer
                                     dataList={this.state.containerDataList}
+                                    textShape={"featureTextStyle"}
                                 ></ImageContainer>
                             </div>
 
+                            <div className="features-location">
+                                <ImageContainer
+                                    dataList={this.state.containerDataList2}
+                                    textShape={"featureTextStyle"}
+                                ></ImageContainer>
+                            </div>
 
                         </div>
                     </div>

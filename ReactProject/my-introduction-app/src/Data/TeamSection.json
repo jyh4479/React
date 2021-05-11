@@ -1,39 +1,27 @@
 {
   "mainTitle": "My Education & Careers",
-  "mainMessageList":[
+  "mainComment": "Employment Period",
+  "dataList":[
     {
       "id":  0,
-      "message": "커리어에 대한 간략한 메세지!"
+      "dataName": "KwangWoon .Univ",
+      "message": "KwangWoon University",
+      "imagePath": "assets/images/kwangwoon.png",
+      "contentMessage": "1. 2015.03 ~ studying (Computer Engineering)"
     },
     {
       "id":  1,
-      "message": "1. 설명설명설명설명설명-1"
+      "dataName": "NAVER .Corp",
+      "message": "NAVER Financial",
+      "imagePath": "assets/images/naver.png",
+      "contentMessage": "2. 2021.01 ~ 2021.02 (Back-end Internship)"
     },
     {
       "id":  2,
-      "message": "2. 설명설명설명설명설명-2"
-    },
-    {
-      "id":  3,
-      "message": "3. 설명설명설명설명설명-3"
-    }
-  ],
-  "dataList": [
-    {
-      "id": 0,
-      "imagePath": "assets/images/kwangwoon.png",
-      "message": "간단 메세지1"
-    },
-    {
-      "id": 1,
-      "imagePath": "assets/images/naver.png",
-      "message": "간단 메세지2"
-    },
-    {
-      "id": 2,
+      "dataName": "KOLON .Corp",
+      "message": "KOLON Benit",
       "imagePath": "assets/images/kolon.png",
-      "message": "간단 메세지3"
+      "contentMessage": "3. 2021.04 ~ working (Java System Development Internship)"
     }
-
   ]
 }

@@ -30,7 +30,9 @@ class AboutSection extends Component{
                     <div className="col-sm-12">
                         <div className="main_about text-center">
                             <MessageBox addClassName="aboutTitle" message={data.title}></MessageBox>
-                            <MessageBox addClassName="aboutContent" message={data.content}></MessageBox>
+                            <div className="m-top-20">
+                                <MessageBox addClassName="aboutContent" message={data.content}></MessageBox>
+                            </div>
                         </div>
                     </div>
                 </div>

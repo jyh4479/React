@@ -4,7 +4,7 @@
 }
 .features-location{
     display: flex;
-    margin-top:10%;
+    margin-top:6%;
 }
 
 .featureHeadTitle{
@@ -15,4 +15,13 @@
     color:#16293b;
     border-left:3px solid #fddc57;
     padding-left:15px;
+}
+
+.featureTextStyle{
+    font-font: 'Montserrat', sans-serif;
+    font-weight:700;
+    font-size:15px;
+    line-height: 40px;
+    color:black;
+    text-align: center;
 }
