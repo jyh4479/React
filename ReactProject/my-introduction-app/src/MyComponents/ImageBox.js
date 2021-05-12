@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 
-class ImageCircle extends Component{
+class ImageBox extends Component{
     constructor(props) {
         super(props);
         this.state={
@@ -13,6 +13,6 @@ class ImageCircle extends Component{
         )
     }
 }
-export default ImageCircle;
+export default ImageBox;
 
 //각각 나눈 컴포넌트에 대한 예외 처리가 중요하다

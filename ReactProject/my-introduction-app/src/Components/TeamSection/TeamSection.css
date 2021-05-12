@@ -38,3 +38,15 @@
 .teamImageMessage{
     font-weight: 600;
 }
+
+.listStyle{
+    list-style-type: circle;
+}
+
+
+
+
+.testtest{
+    border-radius: 10px;
+    background-color: yellow;
+}

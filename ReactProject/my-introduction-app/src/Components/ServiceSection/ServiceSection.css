@@ -19,3 +19,8 @@
     font-family: 'Kaushan Script', cursive;
     color: black;
 }
+
+.listStyle{
+    list-style-type: circle;
+    padding-left: 10px;
+}

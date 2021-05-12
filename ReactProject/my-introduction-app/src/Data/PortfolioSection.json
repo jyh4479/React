@@ -1,0 +1,108 @@
+{
+  "mainTitle": "My Portfolio",
+  "buttonList": [
+    {
+      "id": 0,
+      "buttonName": "test1"
+    },
+    {
+      "id": 1,
+      "buttonName": "test2"
+    },
+    {
+      "id": 2,
+      "buttonName": "test3"
+    },
+    {
+      "id": 3,
+      "buttonName": "test4"
+    }
+  ],
+
+  "portfolioImageList":[
+    {
+      "id": 0,
+      "imageType": "univ",
+      "workTitle": "MFC기반 Snake Game 구현",
+      "imagePath": "assets/images/mfc.png",
+      "message": "뱀의 본체는 Linked list로 구현되어있으며 머리좌표와 먹이 좌표 정보를 통해 이벤트가 발생하도록 구현"
+    },
+    {
+      "id": 1,
+      "imageType": "univ",
+      "workTitle": "첫 Spring 기반 웹 구현",
+      "imagePath": "assets/images/swp1.png",
+      "message": "처음 Spring을 통해 게시판을 구현하였고 미숙하지만 응용해서 사용할 수 있는 웹 구현"
+    },    {
+      "id": 2,
+      "imageType": "univ",
+      "workTitle": "C언어 기반 http서버 구현",
+      "imagePath": "assets/images/sp.png",
+      "message": "Linux환경에서 C언어를 사용하여 ls명령과 각종 옵션을 직접 구현하였으며 출력되는 목록을 http통신을 활용하여 출력 "
+    },
+    {
+      "id": 3,
+      "imageType": "chambit",
+      "workTitle": "PC방 통합 관리 시스템",
+      "imagePath": "assets/images/chambit3.JPG",
+      "message": "Admin은 PC상태에 따라 PC를 직접 관리할 수 있도록 하였으며 user는 앱을 통해 실시간 자리 현황과 자리 예약을 할 수 있도록 구현"
+    },
+    {
+      "id": 4,
+      "imageType": "chambit",
+      "workTitle": "참빛 설계 발표 당일",
+      "imagePath": "assets/images/chambit2.JPG",
+      "message": "~"
+    },
+    {
+      "id": 5,
+      "imageType": "chambit",
+      "workTitle": "참빛 설계 성과",
+      "imagePath": "assets/images/chambit1.JPG",
+      "message": "~"
+    },
+    {
+      "id": 6,
+      "imageType": "intern",
+      "workTitle": "MSA 서버 구축",
+      "imagePath": "assets/images/intern1.png",
+      "message": "Spring cloud gateway를 사용하여 인증 인가가 가능한 프로토타입 구현"
+    },
+    {
+      "id": 7,
+      "imageType": "univ",
+      "workTitle": "Node.js 기반 웹 구축",
+      "imagePath": "assets/images/swe.png",
+      "message": "Node.js와 MySQL을 활용한 기반 휴대폰 중고거래 웹 구축"
+    },
+    {
+      "id": 8,
+      "imageType": "chambit",
+      "workTitle": "AWS를 활용한 마스크 착용여부 판단 시스템",
+      "imagePath": "assets/images/chambitai.png",
+      "message": "각 클라우드 플랫폼에서 제공하는 AI 서비스 성능측정과 간단하게 활용할 수 있는 기능 구현"
+    },
+
+    {
+      "id": 9,
+      "imageType": "chambit",
+      "workTitle": "AWS를 활용한 마스크 착용여부 판단 시스템",
+      "imagePath": "assets/images/chambitai2.png",
+      "message": "~"
+    },
+    {
+      "id": 10,
+      "imageType": "graduation",
+      "workTitle": "~",
+      "imagePath": "assets/images/graduation1.png",
+      "message": "각 클라우드 플랫폼에서 제공하는 AI 서비스 성능측정과 간단하게 활용할 수 있는 기능 구현"
+    },
+    {
+      "id": 11,
+      "imageType": "graduation",
+      "workTitle": "~",
+      "imagePath": "assets/images/graduation2.png",
+      "message": "각 클라우드 플랫폼에서 제공하는 AI 서비스 성능측정과 간단하게 활용할 수 있는 기능 구현"
+    }
+  ]
+}

@@ -1,5 +1,4 @@
-import React, {Component} from "react";
-import ImageCircle from "./ImageCircle";
+import ImageBox from "./ImageBox";
 import MessageBox from "./MessageBox";
 import './ImageSlider.css';
 
@@ -10,7 +9,7 @@ const ImageSlider = (props) => {
     dataList.forEach((data)=>{
         viewData.push(
             <div className="service_slid_text">
-                <ImageCircle addClassName={`image-location ${props.imageShape}`} imagePath={data.imagePath}></ImageCircle>
+                <ImageBox addClassName={`image-location ${props.imageShape}`} imagePath={data.imagePath}></ImageBox>
                 <div className="m-top-20">
                     <MessageBox addClassName={`text-black sliderText ${props.textShape}`} message={data.message}></MessageBox>
                 </div>

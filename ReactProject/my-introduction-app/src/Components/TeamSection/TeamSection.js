@@ -2,7 +2,6 @@ import React, {Component} from "react";
 
 import {connect} from "react-redux";
 import MessageBox from "../../MyComponents/MessageBox";
-import ImageCircle from "../../MyComponents/ImageCircle";
 import ImageContainer from "../../MyComponents/ImageContainer";
 import './TeamSection.css';
 
@@ -34,14 +33,13 @@ class TeamSection extends Component{
         )
         dataList.forEach((data, index)=> {
             contentData.push(
-                <div className="m-top-20">
-                    <MessageBox addClassName="teamMessage" message={data.contentMessage}></MessageBox>
-                </div>
+                <li>
+                    <div className="m-top-20">
+                        <MessageBox addClassName="teamMessage" message={data.contentMessage}></MessageBox>
+                    </div>
+                </li>
             )
         /* --- left side Data --- */
-
-
-
         });
 
 
@@ -62,7 +60,9 @@ class TeamSection extends Component{
 
                                     <MessageBox addClassName="teamHeadTitle" message={this.state.mainTitle}></MessageBox>
                                     <div className="m-top-40">
-                                        {contentData}
+                                        <ul className="listStyle">
+                                            {contentData}
+                                        </ul>
                                     </div>
 
 

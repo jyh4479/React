@@ -38,7 +38,7 @@ class TopNavigation extends Component{
                             <li><a href="#features">About Me</a></li>
                             <li><a href="#service">Skills</a></li>
                             <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#test">Testimonial</a></li>
+                            {/*<li><a href="#test">Testimonial</a></li>*/}
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>

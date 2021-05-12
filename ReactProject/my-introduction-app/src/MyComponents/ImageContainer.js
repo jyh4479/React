@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import MessageBox from "./MessageBox";
-import ImageCircle from "./ImageCircle";
+import ImageBox from "./ImageBox";
 
 import './ImageContainer.css';
 /*
@@ -10,7 +10,7 @@ useEffect
 useMemo
 
 */
-const ImageContainer = (props) =>{
+const ImageContainer = props =>{
     let dataList=props.dataList;
     let viewData = [];
 
@@ -18,7 +18,7 @@ const ImageContainer = (props) =>{
         viewData.push(
             <div className="col-xs-6">
                 <div className="features_item_text item-location">
-                    <ImageCircle addClassName={props.imageShape} imagePath={data.imagePath}></ImageCircle>
+                    <ImageBox addClassName={props.imageShape} imagePath={data.imagePath}></ImageBox>
                     <div className={"m-top-10"}>
                         <MessageBox addClassName={`text-black containerText ${props.textShape}`} message={data.message}></MessageBox>
                     </div>

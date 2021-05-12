@@ -5,6 +5,7 @@ import featureSectionData from "./Data/FeatureSection.json";
 import aboutSectionData from "./Data/AboutSection.json";
 import serviceSectionData from "./Data/ServiceSection.json";
 import teamSectionData from "./Data/TeamSection.json";
+import portfolioSectionData from "./Data/PortfolioSection.json";
 
 export default createStore(function(state,action){
     if(state===undefined){
@@ -23,6 +24,9 @@ export default createStore(function(state,action){
 
             /* --- TeamSection ---*/
             teamSectionData:teamSectionData,
+
+            /* --- PortfolioSection ---*/
+            portfolioSectionData:portfolioSectionData,
         }
     }
 

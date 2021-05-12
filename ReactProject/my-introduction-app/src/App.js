@@ -25,7 +25,7 @@ function App() {
               <ServiceSection></ServiceSection>
               <ChooseSection></ChooseSection>
               <PortfolioSection></PortfolioSection>
-              <TestSection></TestSection>
+              {/*<TestSection></TestSection>*/}
               <Footer></Footer>
 
               <QuickMenu></QuickMenu>

@@ -31,9 +31,11 @@ class ServiceSection extends Component{
         )
         dataList.forEach((data)=>{
             viewData.push(
-                <div className="m-top-20">
-                    <MessageBox addClassName="serviceMessage" message={data.contentMessage}></MessageBox>
-                </div>
+                <li>
+                    <div className="m-top-20">
+                        <MessageBox addClassName="serviceMessage" message={data.contentMessage}></MessageBox>
+                    </div>
+                </li>
             )
         });
 
@@ -62,8 +64,11 @@ class ServiceSection extends Component{
 
 
                                     <MessageBox addClassName="serviceHeadTitle" message={this.state.mainTitle}></MessageBox>
+
                                     <div className="m-top-40">
-                                        {viewData}
+                                        <ul className="listStyle">
+                                            {viewData}
+                                        </ul>
                                     </div>
 
 

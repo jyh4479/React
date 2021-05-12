@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 
 import ImageContainer from "../../MyComponents/ImageContainer";
 import MessageBox from "../../MyComponents/MessageBox";
-import ImageCircle from "../../MyComponents/ImageCircle";
+import ImageBox from "../../MyComponents/ImageBox";
 
 function mapReduxStateToReactProps(state){
     return{
@@ -38,7 +38,7 @@ class FeatureSection extends Component{
 
                                         {/*<h2 className="text-uppercase">About <strong>Me</strong></h2>*/}
                                         <MessageBox addClassName="featureHeadTitle" message={this.state.mainMessage}></MessageBox>
-                                        <ImageCircle addClassName="img-circle m-top-20" imagePath={this.state.mainImage}></ImageCircle>
+                                        <ImageBox addClassName="img-circle m-top-20" imagePath={this.state.mainImage}></ImageBox>
 
 
 
