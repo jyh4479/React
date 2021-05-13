@@ -34,10 +34,6 @@ const PortfolioSection = props =>{
     return(
         <section id="portfolio" className="portfolio margin-top-120">
 
-            {/* --- Test Section --- */}
-
-
-            {/* --- Test Section --- */}
 
             <div className="container">
                 <div className="row">
@@ -66,6 +62,13 @@ const PortfolioSection = props =>{
                             {/* Image Section */}
                             {imageView}
                         </div>
+
+                        {/* --- Test Section --- */}
+
+                        <PortfolioImage></PortfolioImage>
+
+                        {/* --- Test Section --- */}
+
 
 
                         <div style={{clear:'both'}}></div>
