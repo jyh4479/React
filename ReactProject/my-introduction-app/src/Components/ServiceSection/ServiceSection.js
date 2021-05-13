@@ -31,11 +31,17 @@ class ServiceSection extends Component{
         )
         dataList.forEach((data)=>{
             viewData.push(
-                <li>
-                    <div className="m-top-20">
-                        <MessageBox addClassName="serviceMessage" message={data.contentMessage}></MessageBox>
+                <div className="m-top-15">
+                    <div className="chooseContentLocation">
+                        <div>
+                            <i className="fa fa-check-square-o iconLocation"></i>
+                        </div>
+                        <div>
+                            <MessageBox addClassName="chooseMessage text-black" message={data.message}></MessageBox>
+                        </div>
                     </div>
-                </li>
+                    <MessageBox addClassName="chooseMessage font-size-14" message={data.contentMessage}></MessageBox>
+                </div>
             )
         });
 
@@ -65,10 +71,10 @@ class ServiceSection extends Component{
 
                                     <MessageBox addClassName="serviceHeadTitle" message={this.state.mainTitle}></MessageBox>
 
-                                    <div className="m-top-40">
-                                        <ul className="listStyle">
-                                            {viewData}
-                                        </ul>
+                                    <div className="m-top-20">
+
+                                        {viewData}
+
                                     </div>
 
 

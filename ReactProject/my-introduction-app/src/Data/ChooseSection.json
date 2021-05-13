@@ -1,0 +1,25 @@
+{
+  "mainTitle": "Why Choose Me",
+  "mainMessage": "List of my strengths",
+
+  "skillData": [
+    {
+      "id": 0,
+      "imagePath":"assets/images/frontend.png",
+      "message": "직무에 대한 꾸준한 관심",
+      "contentMessage":"GitHub을 이용해 1일 1커밋 활동을 하고있고 의미 있는 커밋을 하기 위해 노력하고있습니다"
+    },
+    {
+      "id": 1,
+      "imagePath":"assets/images/backend.png",
+      "message": "의사소통",
+      "contentMessage": "실무에서 협업은 필수입니다. 직무뿐 아니라 여러 활동을 통해 의사소통을 위해 노력하고있습니다"
+    },
+    {
+      "id": 2,
+      "imagePath":"assets/images/cloud.png",
+      "message": "스트레스 해소",
+      "contentMessage": "적절한 취미는 일을 하거나 공부를 할 때 큰 도움이 됩니다. 건강한 취미를 꾸준히 하려고 노력하고 있습니다"
+    }
+  ]
+}

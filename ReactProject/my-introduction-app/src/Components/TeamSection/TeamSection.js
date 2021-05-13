@@ -33,11 +33,22 @@ class TeamSection extends Component{
         )
         dataList.forEach((data, index)=> {
             contentData.push(
-                <li>
-                    <div className="m-top-20">
-                        <MessageBox addClassName="teamMessage" message={data.contentMessage}></MessageBox>
+
+                    // <div className="m-top-20">
+                    //     <MessageBox addClassName="teamMessage" message={data.contentMessage}></MessageBox>
+                    // </div>
+                <div className="m-top-20">
+                    <div className="chooseContentLocation">
+                        <div>
+                            <i className="fa fa-check-square-o iconLocation"></i>
+                        </div>
+                        <div>
+                            <MessageBox addClassName="chooseMessage text-black" message={data.message}></MessageBox>
+                        </div>
                     </div>
-                </li>
+                    <MessageBox addClassName="chooseMessage font-size-14" message={data.contentMessage}></MessageBox>
+                </div>
+
             )
         /* --- left side Data --- */
         });
@@ -60,9 +71,9 @@ class TeamSection extends Component{
 
                                     <MessageBox addClassName="teamHeadTitle" message={this.state.mainTitle}></MessageBox>
                                     <div className="m-top-40">
-                                        <ul className="listStyle">
-                                            {contentData}
-                                        </ul>
+
+                                        {contentData}
+
                                     </div>
 
 
@@ -74,54 +85,10 @@ class TeamSection extends Component{
 
 
 
-                            <div className={"teamContentLocation m-top-80"}>
+                            <div className={"teamContentLocation m-top-120"}>
                                 <ImageContainer textShape="teamImageMessage" imageShape="img-circle" dataList={this.state.dataList}></ImageContainer>
                             </div>
 
-
-
-                            {/*<div className="col-md-6">*/}
-                            {/*    <div className="teams_item text-center sm-m-top-50">*/}
-                            {/*        <div className="row">*/}
-                            {/*            <div className="col-sm-4">*/}
-                            {/*                <img src="assets/images/team1.jpg" alt="" className="img-circle"/>*/}
-                            {/*                <h4 className="m-top-20">John <strong>Doe</strong></h4>*/}
-                            {/*                <h5>Lead Designer</h5>*/}
-                            {/*                <div className="separator"></div>*/}
-                            {/*                <ul className="list-inline">*/}
-                            {/*                    <li><a href=""><i className="fa fa-facebook"></i></a></li>*/}
-                            {/*                    <li><a href=""><i className="fa fa-twitter"></i></a></li>*/}
-                            {/*                    <li><a href=""><i className="fa fa-dribbble"></i></a></li>*/}
-                            {/*                </ul>*/}
-                            {/*            </div>*/}
-
-                            {/*            <div className="col-sm-4">*/}
-                            {/*                <img src="assets/images/team2.jpg" alt="" className="img-circle"/>*/}
-                            {/*                <h4 className="m-top-20">Sarah <strong>Smith</strong></h4>*/}
-                            {/*                <h5>UX Designer</h5>*/}
-                            {/*                <div className="separator"></div>*/}
-                            {/*                <ul className="list-inline">*/}
-                            {/*                    <li><a href=""><i className="fa fa-facebook"></i></a></li>*/}
-                            {/*                    <li><a href=""><i className="fa fa-twitter"></i></a></li>*/}
-                            {/*                    <li><a href=""><i className="fa fa-dribbble"></i></a></li>*/}
-                            {/*                </ul>*/}
-                            {/*            </div>*/}
-
-                            {/*            <div className="col-sm-4">*/}
-                            {/*                <img src="assets/images/team3.jpg" alt="" className="img-circle"/>*/}
-                            {/*                <h4 className="m-top-20">Fabian <strong>Doe</strong></h4>*/}
-                            {/*                <h5>Web Engineer</h5>*/}
-                            {/*                <div className="separator"></div>*/}
-                            {/*                <ul className="list-inline">*/}
-                            {/*                    <li><a href=""><i className="fa fa-facebook"></i></a></li>*/}
-                            {/*                    <li><a href=""><i className="fa fa-twitter"></i></a></li>*/}
-                            {/*                    <li><a href=""><i className="fa fa-dribbble"></i></a></li>*/}
-                            {/*                </ul>*/}
-                            {/*            </div>*/}
-
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
 
 
 

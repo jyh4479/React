@@ -7,25 +7,25 @@
       "id": 0,
       "imagePath":"assets/images/frontend.png",
       "message": "Front-End",
-      "contentMessage":"Recently , I'm studying the front-end through React"
+      "contentMessage": "최근 React를 통해서 front-end를 공부하고 있습니다"
     },
     {
       "id": 1,
       "imagePath":"assets/images/backend.png",
       "message": "Back-End",
-      "contentMessage": "I'm using Spring Boot, MySQL, MyBatis and want to learn JPA, MariaDB"
+      "contentMessage": "Back-end 기술로 Spring boot, MySQL, MyBatis를 사용하고 JPA와 MariaDB를 배울 계획입니다 "
     },
     {
       "id": 2,
       "imagePath":"assets/images/cloud.png",
       "message": "Cloud Service",
-      "contentMessage": "I want to study Cloud and have experience working on projects using AWS rekognition."
+      "contentMessage": "Cloud분야를 공부하고 싶고 AWS의 S3와 rekognition를 사용하여 프로젝트를 진행한 경험이 있습니다"
     },
     {
       "id": 3,
       "imagePath":"assets/images/tools.png",
       "message": "Cooperation Tools",
-      "contentMessage": "I use GitHub often and I'm learning other tools"
+      "contentMessage": "GitHub를 적극적으로 사용하고 있고 현업에서 필요한 다른 툴도 찾아보고 공부하고있습니다"
     }
   ]
 }
