@@ -65,7 +65,7 @@ const PortfolioSection = props =>{
 
                         {/* --- Test Section --- */}
 
-                        <PortfolioImage></PortfolioImage>
+                        {/*<PortfolioImage imagePath={"assets/images/swp1.png"}></PortfolioImage>*/}
 
                         {/* --- Test Section --- */}
 

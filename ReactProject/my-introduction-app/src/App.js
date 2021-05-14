@@ -28,7 +28,9 @@ function App() {
               {/*<TestSection></TestSection>*/}
               <Footer></Footer>
 
-              <QuickMenu></QuickMenu>
+              {/*<QuickMenu></QuickMenu>*/}
+              {/*기능추가 예정*/}
+
           </div>
       </>
   );

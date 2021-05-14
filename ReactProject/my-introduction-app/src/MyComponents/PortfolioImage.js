@@ -100,11 +100,8 @@ export default PortfolioImage;
 /*
 
 Don't call an async method within a view.
-
 When you mark the method as async it will return a promise, so, its pointless to return a promise and mark it as async at same time.
-
 You should await the async method or promise from created or some other suitable lifecycle hook and save the result in component’s data, then render that data.
-
 Also, take a look at vue-promised plugin.
 
 */

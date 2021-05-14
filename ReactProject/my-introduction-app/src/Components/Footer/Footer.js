@@ -1,152 +1,102 @@
-import React, {Component} from "react";
+import React from "react";
+import './Footer.css';
 
-class Footer extends Component{
-    render(){
-        return(
-            <footer id="contact" className="footer action-lage bg-black p-top-80">
-                
-                
-                
-                <div>무슨 말을 써볼까요</div>
-                {/*<div className="container">*/}
-                {/*    <div className="row">*/}
-                {/*        <div className="widget_area">*/}
-                {/*            <div className="col-md-3">*/}
-                {/*                <div className="widget_item widget_about">*/}
-                {/*                    <h5 className="text-white">About Us</h5>*/}
-                {/*                    <p className="m-top-30">Lorem ipsum dolor sit amet consec tetur adipiscing elit*/}
-                {/*                        nulla aliquet pretium nisi in cursus*/}
-                {/*                        maecenas nec eleifen.</p>*/}
-                {/*                    <div className="widget_ab_item m-top-30">*/}
-                {/*                        <div className="item_icon"><i className="fa fa-location-arrow"></i></div>*/}
-                {/*                        <div className="widget_ab_item_text">*/}
-                {/*                            <h6 className="text-white">Location</h6>*/}
-                {/*                            <p>*/}
-                {/*                                123 suscipit ipsum nam auctor*/}
-                {/*                                mauris dui, ac sollicitudin mauris,*/}
-                {/*                                Bandung</p>*/}
-                {/*                        </div>*/}
-                {/*                    </div>*/}
-                {/*                    <div className="widget_ab_item m-top-30">*/}
-                {/*                        <div className="item_icon"><i className="fa fa-phone"></i></div>*/}
-                {/*                        <div className="widget_ab_item_text">*/}
-                {/*                            <h6 className="text-white">Phone :</h6>*/}
-                {/*                            <p>+1 2345 6789</p>*/}
-                {/*                        </div>*/}
-                {/*                    </div>*/}
-                {/*                    <div className="widget_ab_item m-top-30">*/}
-                {/*                        <div className="item_icon"><i className="fa fa-envelope-o"></i></div>*/}
-                {/*                        <div className="widget_ab_item_text">*/}
-                {/*                            <h6 className="text-white">Email Address :</h6>*/}
-                {/*                            <p>youremail@mail.com</p>*/}
-                {/*                        </div>*/}
-                {/*                    </div>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
+import emailjs from 'emailjs-com';
 
-                {/*            <div className="col-md-3">*/}
-                {/*                <div className="widget_item widget_latest sm-m-top-50">*/}
-                {/*                    <h5 className="text-white">Latest News</h5>*/}
-                {/*                    <div className="widget_latst_item m-top-30">*/}
-                {/*                        <div className="item_icon"><img src="assets/images/ltst-img-1.jpg" alt=""/>*/}
-                {/*                        </div>*/}
-                {/*                        <div className="widget_latst_item_text">*/}
-                {/*                            <p>Lorem ipsum dolor sit amet, consectetur</p>*/}
-                {/*                            <a href="">21<sup>th</sup> July 2016</a>*/}
-                {/*                        </div>*/}
-                {/*                    </div>*/}
-                {/*                    <div className="widget_latst_item m-top-30">*/}
-                {/*                        <div className="item_icon"><img src="assets/images/ltst-img-2.jpg" alt=""/>*/}
-                {/*                        </div>*/}
-                {/*                        <div className="widget_latst_item_text">*/}
-                {/*                            <p>Lorem ipsum dolor sit amet, consectetur</p>*/}
-                {/*                            <a href="">21<sup>th</sup> July 2016</a>*/}
-                {/*                        </div>*/}
-                {/*                    </div>*/}
-                {/*                    <div className="widget_latst_item m-top-30">*/}
-                {/*                        <div className="item_icon"><img src="assets/images/ltst-img-3.jpg" alt=""/>*/}
-                {/*                        </div>*/}
-                {/*                        <div className="widget_latst_item_text">*/}
-                {/*                            <p>Lorem ipsum dolor sit amet, consectetur</p>*/}
-                {/*                            <a href="">21<sup>th</sup> July 2016</a>*/}
-                {/*                        </div>*/}
-                {/*                    </div>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
+const Footer = () => {
+    function sendEmail(e) {
+        e.preventDefault();
 
-                {/*            <div className="col-md-3">*/}
-                {/*                <div className="widget_item widget_service sm-m-top-50">*/}
-                {/*                    <h5 className="text-white">Latest News</h5>*/}
-                {/*                    <ul className="m-top-20">*/}
-                {/*                        <li className="m-top-20"><a href="#"><i className="fa fa-angle-right"></i> Web*/}
-                {/*                            Design</a></li>*/}
-                {/*                        <li className="m-top-20"><a href="#"><i className="fa fa-angle-right"></i> User*/}
-                {/*                            Interface Design</a></li>*/}
-                {/*                        <li className="m-top-20"><a href="#"><i className="fa fa-angle-right"></i> Web*/}
-                {/*                            Hosting</a></li>*/}
-                {/*                        <li className="m-top-20"><a href="#"><i*/}
-                {/*                            className="fa fa-angle-right"></i> Themes</a></li>*/}
-                {/*                        <li className="m-top-20"><a href="#"><i*/}
-                {/*                            className="fa fa-angle-right"></i> Support Forums</a></li>*/}
-                {/*                    </ul>*/}
+        emailjs.sendForm('service_w1ecg73', 'template_gzrhiqp', e.target, 'user_VNUvEo7XpOE2jekrTUGqD')
+            .then((result) => {
+                console.log(result.text);
+                alert("메일전송성공.")
+            }, (error) => {
+                console.log(error.text);
+                alert("메일전송실패.")
+            });
+    }
 
-                {/*                </div>*/}
-                {/*            </div>*/}
+    return (
+        <>
+            <footer id="contact" className="footer action-lage bg-focial p-top-80">
 
-                {/*            <div className="col-md-3">*/}
-                {/*                <div className="widget_item widget_newsletter sm-m-top-50">*/}
-                {/*                    <h5 className="text-white">Newsletter</h5>*/}
-                {/*                    <form className="form-inline m-top-30">*/}
-                {/*                        <div className="form-group">*/}
-                {/*                            <input type="email" className="form-control" placeholder="Enter you Email"/>*/}
-                {/*                                <button type="submit" className="btn text-center"><i*/}
-                {/*                                    className="fa fa-arrow-right"></i></button>*/}
-                {/*                        </div>*/}
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="contact-left">
+                                <div className="contact-details">
+                                    <h1 className="text-yellow">Contact Me</h1>
+                                    <p className="text-white">Lorem ipsum dolor sit amet, ea doming epicuri iudicabit
+                                        nam, te usu virtute
+                                        placerat. Purto brute disputando cu est, eam dicam soluta ei. Vel dicam vivendo
+                                        accusata ei.</p>
+                                </div>
 
-                {/*                    </form>*/}
-                {/*                    <div className="widget_brand m-top-40">*/}
-                {/*                        <a href="" className="text-uppercase">Your Logo</a>*/}
-                {/*                        <p>Lorem ipsum dolor sit amet consec tetur*/}
-                {/*                            adipiscing elit nulla aliquet pretium nisi in</p>*/}
-                {/*                    </div>*/}
-                {/*                    <ul className="list-inline m-top-20">*/}
-                {/*                        <li>- <a href=""><i className="fa fa-facebook"></i></a></li>*/}
-                {/*                        <li><a href=""><i className="fa fa-twitter"></i></a></li>*/}
-                {/*                        <li><a href=""><i className="fa fa-linkedin"></i></a></li>*/}
-                {/*                        <li><a href=""><i className="fa fa-google-plus"></i></a></li>*/}
-                {/*                        <li><a href=""><i className="fa fa-behance"></i></a></li>*/}
-                {/*                        <li><a href=""><i className="fa fa-dribbble"></i></a> -</li>*/}
-                {/*                    </ul>*/}
+                                <div className="contact-address text-white">
+                                    <p>122 33rd Street East<br/> Saskatoon, SK<br/> S7K 1R9</p>
+                                </div>
 
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+                                <div className="contact-mail text-white">
+                                    <p><span className="text-yellow">Email:</span> info@focal.com</p>
+                                    <p><span className="text-yellow">Phone:</span> 1-306-222-2323</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="contact-form">
 
 
+                                <form onSubmit={sendEmail} className="m-bottom-70">
+                                    <input type="hidden" name="contact_number" />
+                                    <div className="form-group">
+                                        <label htmlFor="name" className="text-yellow">Name <span>*</span></label>
+                                        <input type="text" name="user_name" className="form-control"/>
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="email" className="text-yellow">Email
+                                            Address <span>*</span></label>
+                                        <input type="email" name="user_email" className="form-control" id="email"/>
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="message" className="text-yellow">Message <span>*</span></label>
+                                        <textarea className="form-control" name="message" rows="10"></textarea>
+                                    </div>
+                                    <button type="submit" className="btn submit-btn">Contact me</button>
+                                </form>
 
-
-
-
-                <div className="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
-                    <div className="col-md-12">
-                        <p className="wow fadeInRight" data-wow-duration="1s">
-                            Made with
-                            <i className="fa fa-heart"></i>
-                            by
-                            <a target="_blank" href="http://bootstrapthemes.co">Bootstrap Themes</a>
-                            2016. All Rights Reserved
-                        </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-
-
-
-
             </footer>
-        )
-    }
+
+            {/*<div className="footer-area">*/}
+            {/*    <div className="container">*/}
+            {/*        <div className="row text-center">*/}
+            {/*            <p className="copyright">*/}
+            {/*                Copyright 2014 Focal - Built With Passion*/}
+            {/*            </p>*/}
+            {/*            <div className="footer-social-links">*/}
+            {/*                <a href="#"><i className="fa fa-twitter"></i></a>*/}
+            {/*                <a href="#"><i className="fa fa-facebook"></i></a>*/}
+            {/*                <a href="#"><i className="fa fa-pinterest"></i></a>*/}
+            {/*                <a href="#"><i className="fa fa-google-plus"></i></a>*/}
+            {/*                <a href="#"><i className="fa fa-dribbble"></i></a>*/}
+            {/*                <a href="#"><i className="fa fa-linkedin"></i></a>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+
+
+
+
+
+
+        </>
+    )
 }
+
 export default Footer;
