@@ -1,19 +1,34 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
+import {connect} from "react-redux";
 import './Footer.css';
+
+import ImageButton from "../../MyComponents/ImageButton";
+import MessageBox from "../../MyComponents/MessageBox";
 
 import emailjs from 'emailjs-com';
 
-const Footer = () => {
+function mapReduxStateToReactProps(state){
+    return{
+        footerSectionData:state.footerSectionData
+    };
+}
+
+const Footer = props => {
+    const [footerTitle,setFooterTitle] = useState(props.footerSectionData.titleMessage);
+    const [footerMessage,setFooterMessage] = useState(props.footerSectionData.message);
+    const [footerEmail,setFooterEmail] = useState(props.footerSectionData.email);
+    const [footerPhone,setFooterPhone] = useState(props.footerSectionData.phone);
+
     function sendEmail(e) {
         e.preventDefault();
 
         emailjs.sendForm('service_w1ecg73', 'template_gzrhiqp', e.target, 'user_VNUvEo7XpOE2jekrTUGqD')
             .then((result) => {
                 console.log(result.text);
-                alert("메일전송성공.")
+                alert("메일전송성공")
             }, (error) => {
                 console.log(error.text);
-                alert("메일전송실패.")
+                alert("메일전송실패")
             });
     }
 
@@ -23,28 +38,64 @@ const Footer = () => {
 
                 <div className="container">
                     <div className="row">
+
+
+
                         <div className="col-lg-6">
                             <div className="contact-left">
                                 <div className="contact-details">
-                                    <h1 className="text-yellow">Contact Me</h1>
-                                    <p className="text-white">Lorem ipsum dolor sit amet, ea doming epicuri iudicabit
-                                        nam, te usu virtute
-                                        placerat. Purto brute disputando cu est, eam dicam soluta ei. Vel dicam vivendo
-                                        accusata ei.</p>
+
+
+
+
+
+                                    <MessageBox addClassName={"footerTitle"} message={footerTitle}></MessageBox>
+                                    <div class="m-top-10">
+                                        <MessageBox addClassName={"footerMessage"} message={footerMessage}></MessageBox>
+                                    </div>
+
+
+
+
+
+
                                 </div>
 
-                                <div className="contact-address text-white">
-                                    <p>122 33rd Street East<br/> Saskatoon, SK<br/> S7K 1R9</p>
+
+
+
+
+
+                                <div className="contact-mail text-white m-top-20">
+                                    <p className="footerDisplay">
+                                        <span className="text-yellow m-right-10">Email:</span>
+                                        <MessageBox addClassName="text-white" message={footerEmail}></MessageBox>
+                                    </p>
+
+                                    <p className="footerDisplay">
+                                        <span className="text-yellow m-right-10">Phone:</span>
+                                        <MessageBox addClassName="text-white" message={footerPhone}></MessageBox>
+                                    </p>
                                 </div>
 
-                                <div className="contact-mail text-white">
-                                    <p><span className="text-yellow">Email:</span> info@focal.com</p>
-                                    <p><span className="text-yellow">Phone:</span> 1-306-222-2323</p>
-                                </div>
+
+
+
+
+
+
                             </div>
                         </div>
+
+
+
                         <div className="col-lg-6">
                             <div className="contact-form">
+
+
+
+
+
 
 
                                 <form onSubmit={sendEmail} className="m-bottom-70">
@@ -62,34 +113,26 @@ const Footer = () => {
                                         <label htmlFor="message" className="text-yellow">Message <span>*</span></label>
                                         <textarea className="form-control" name="message" rows="10"></textarea>
                                     </div>
-                                    <button type="submit" className="btn submit-btn">Contact me</button>
+                                    {/*<button type="submit" className="">Contact me</button>*/}
+                                    <ImageButton buttonName={"Contact Me"} hoverBgColor="#fddc57"></ImageButton>
                                 </form>
 
+
+
+
+
+
+
+
+
+
+                                
                             </div>
                         </div>
                     </div>
                 </div>
 
             </footer>
-
-            {/*<div className="footer-area">*/}
-            {/*    <div className="container">*/}
-            {/*        <div className="row text-center">*/}
-            {/*            <p className="copyright">*/}
-            {/*                Copyright 2014 Focal - Built With Passion*/}
-            {/*            </p>*/}
-            {/*            <div className="footer-social-links">*/}
-            {/*                <a href="#"><i className="fa fa-twitter"></i></a>*/}
-            {/*                <a href="#"><i className="fa fa-facebook"></i></a>*/}
-            {/*                <a href="#"><i className="fa fa-pinterest"></i></a>*/}
-            {/*                <a href="#"><i className="fa fa-google-plus"></i></a>*/}
-            {/*                <a href="#"><i className="fa fa-dribbble"></i></a>*/}
-            {/*                <a href="#"><i className="fa fa-linkedin"></i></a>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-
 
 
 
@@ -99,4 +142,4 @@ const Footer = () => {
     )
 }
 
-export default Footer;
+export default connect(mapReduxStateToReactProps)(Footer);

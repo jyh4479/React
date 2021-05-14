@@ -7,6 +7,7 @@ import serviceSectionData from "./Data/ServiceSection.json";
 import teamSectionData from "./Data/TeamSection.json";
 import portfolioSectionData from "./Data/PortfolioSection.json";
 import chooseSectionData from "./Data/ChooseSection.json";
+import footerSectionData from "./Data/FooterSection.json";
 
 export default createStore(function(state,action){
     if(state===undefined){
@@ -30,6 +31,8 @@ export default createStore(function(state,action){
             portfolioSectionData:portfolioSectionData,
 
             chooseSectionData:chooseSectionData,
+
+            footerSectionData:footerSectionData
         }
     }
 

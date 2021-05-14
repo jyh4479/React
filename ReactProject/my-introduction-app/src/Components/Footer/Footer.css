@@ -2,7 +2,26 @@
     text-align: center;
     color:white;
 }
-
 .footer-area{
     background-color: #191f21;
+}
+
+.footerTitle{
+    color: #fddc57;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    line-height:4rem;
+}
+
+.footerMessage{
+    color: white !important;
+    line-height: 1.5rem;
+}
+
+.footerDisplay{
+    display: flex;
+}
+
+.m-right-10{
+    margin-right:10px;
 }
