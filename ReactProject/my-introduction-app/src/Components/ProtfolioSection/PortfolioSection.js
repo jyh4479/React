@@ -5,6 +5,7 @@ import ImageButton from "../../MyComponents/ImageButton";
 import MessageBox from "../../MyComponents/MessageBox";
 import PortfolioImage from "../../MyComponents/PortfolioImage";
 import './PortfolioSection.css';
+import ImportScript from "./ImportScript";
 
 function mapReduxStateToReactProps(state){
     return{
@@ -16,6 +17,9 @@ const PortfolioSection = props =>{
     const [mainTitle] = useState(props.portfolioSectionData.mainTitle);
     const [buttonList] = useState(props.portfolioSectionData.buttonList);
     const [imageList] = useState(props.portfolioSectionData.portfolioImageList);
+
+
+
 
 
     let imageView = [];
