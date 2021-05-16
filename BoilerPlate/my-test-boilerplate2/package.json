@@ -1,5 +1,5 @@
 {
-  "name": "my-test-boilerplate",
+  "name": "my-test-boilerplate2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,8 +12,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "build": "webpack",
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,23 +35,14 @@
       "last 1 safari version"
     ]
   },
-  "main": "index.js",
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^4.0.0-alpha.0",
-    "css-loader": "^5.2.4",
-    "html-loader": "^2.1.2",
-    "html-webpack-plugin": "^5.3.1",
-    "mini-css-extract-plugin": "^1.6.0",
-    "node-sass": "^6.0.0",
-    "sass-loader": "^11.1.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.37.0",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^4.44.2",
     "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.1"
   }
 }
