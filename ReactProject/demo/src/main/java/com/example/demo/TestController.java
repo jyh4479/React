@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.Menu.ChartData;
 import com.example.demo.Menu.TopMenuContents;
 import com.example.demo.Menu.TopMenuTitle;
 import org.apache.logging.log4j.LogManager;
@@ -18,6 +19,35 @@ import java.util.Date;
 @CrossOrigin(origins = "*")
 public class TestController {
     private static Logger logger = LogManager.getLogger(TestController.class);
+
+    @GetMapping("/BarChartData")
+    public ArrayList TestChartData(){
+        return new ArrayList(Arrays.asList(
+                new ChartData("2019년 08월",7732516),
+                new ChartData("2019년 09월",3515754),
+                new ChartData("2019년 09월",10515754),
+                new ChartData("2019년 09월",3266835),
+                new ChartData("2019년 09월",3892845),
+                new ChartData("2019년 09월",1572945),
+                new ChartData("2019년 09월",3515754),
+                new ChartData("2019년 09월",7732516),
+                new ChartData("2019년 09월",3266835),
+                new ChartData("2019년 09월",3892845),
+                new ChartData("2019년 09월",1572945),
+                new ChartData("2019년 09월",3892845),
+                new ChartData("2019년 09월",1572945),
+                new ChartData("2019년 09월",3515754),
+                new ChartData("2019년 09월",7732516),
+                new ChartData("2019년 09월",3266835),
+                new ChartData("2019년 09월",1572945),
+                new ChartData("2019년 09월",3515754),
+                new ChartData("2019년 09월",7732516),
+                new ChartData("2019년 09월",3266835),
+                new ChartData("2019년 09월",3892845),
+                new ChartData("2019년 09월",1572945)
+        ));
+    }
+
 
     @GetMapping("/Hello")
     public String HelloWorldController() {

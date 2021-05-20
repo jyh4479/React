@@ -14,7 +14,7 @@ const Test4 = () =>{
         {
             responsive: true,
             maintainAspectRatio: false,
-//tooltips 사용시
+
             tooltips: {
                 enabled: true,
                 mode: "nearest",
