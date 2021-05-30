@@ -1,4 +1,4 @@
-package com.example.demo.Menu;
+package com.example.demo.DAO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
