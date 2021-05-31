@@ -20,6 +20,15 @@ import java.util.Date;
 public class TestController {
     private static Logger logger = LogManager.getLogger(TestController.class);
 
+
+    @GetMapping("/UserList")
+    public ArrayList TestUserData(){
+        return new ArrayList(Arrays.asList(
+                new UserData("이광훈","kwanghoon",0),
+                new UserData("정용훈","yonghoon",1)
+        ));
+    }
+
     @GetMapping("/TableData")
     public TableData TestTableData() {
 
