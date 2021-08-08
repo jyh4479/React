@@ -1,12 +1,12 @@
 import './App.css';
-import Parents from "./Components/Parents";
+import {MyButton} from "./Components";
 
 function App() {
-  return (
-    <div className="App">
-      <Parents></Parents>
-    </div>
-  );
+    return (
+        <div className="App">
+            <MyButton></MyButton>
+        </div>
+    );
 }
 
 export default App;
