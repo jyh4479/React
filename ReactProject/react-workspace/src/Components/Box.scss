@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+
+  .red {
+    background: red;
+  }
+
+  .blue {
+    background: blue;
+  }
+
+  .green {
+    background: green;
+  }
+}

@@ -1,10 +1,11 @@
 import './App.css';
-import {MyButton} from "./Components";
+import {Box, MyButton} from "./Components";
 
 function App() {
     return (
         <div className="App">
             <MyButton></MyButton>
+            <Box></Box>
         </div>
     );
 }
