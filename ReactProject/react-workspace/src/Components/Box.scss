@@ -5,16 +5,12 @@
 .box {
   width: 100px;
   height: 100px;
+}
 
-  .red {
-    background: red;
-  }
-
-  .blue {
-    background: blue;
-  }
-
-  .green {
-    background: green;
+$colors: (blue, red, green);
+@each $color in $colors {
+  .box-#{$color} {
+    @extend .box;
+    background: #{$color};
   }
 }
