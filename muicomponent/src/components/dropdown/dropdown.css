@@ -1,0 +1,95 @@
+.container {
+    width: 280px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.menu,
+.sub-menu {
+    list-style: none;
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+
+    overflow: hidden;
+}
+
+.sub-menu {
+}
+
+.menu li {
+    width: 100%;
+    /* 높이 지정하면 디자인 깨짐 */
+    /*height: 50px;*/
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+.menu li div {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.menu > li {
+    background: #e0e0e0;
+}
+
+.sub-menu > li {
+    background: skyblue;
+}
+
+.menu > li:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+.menu > li:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+.menu > li:last-child > .sub-menu > li:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+.menu > li:hover {
+    background: darkgray;
+}
+
+.menu > li svg {
+    position: absolute;
+    top: 25%;
+    left: 85%;
+}
+
+.menu > li svg:hover {
+    color: #fff;
+}
+
+.sub-menu.hide {
+    max-height: 0;
+    transition: max-height 0.3s linear;
+}
+
+.sub-menu.show {
+    /*max-height: 150px;*/
+    transition: max-height 0.3s linear;
+}
