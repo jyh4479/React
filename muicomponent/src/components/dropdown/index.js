@@ -2,6 +2,8 @@ import React, {useRef} from "react";
 import "./dropdown.css"
 import {AddBoxRounded} from "@mui/icons-material";
 
+import MenuItem from '@mui/material/MenuItem';
+
 
 const Dropdown = props => {
     // 직접 돔을 조작하는 아래 로직
@@ -36,15 +38,18 @@ const Dropdown = props => {
                     <AddBoxRounded onClick={() => open(0)}/>
                 </div>
                 <ul ref={el => subMenuList.current[0] = el} className={"sub-menu hide"}>
-                    <li>
-                        <div>Sub1</div>
-                    </li>
-                    <li>
-                        <div>Sub2</div>
-                    </li>
-                    <li>
-                        <div>Sub3</div>
-                    </li>
+                    <MenuItem><div>Profile</div></MenuItem>
+                    <MenuItem><div>Profile</div></MenuItem>
+                    <MenuItem><div>Profile</div></MenuItem>
+                    {/*<li>*/}
+                    {/*    <div>Sub1</div>*/}
+                    {/*</li>*/}
+                    {/*<li>*/}
+                    {/*    <div>Sub2</div>*/}
+                    {/*</li>*/}
+                    {/*<li>*/}
+                    {/*    <div>Sub3</div>*/}
+                    {/*</li>*/}
                 </ul>
             </li>
 

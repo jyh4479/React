@@ -1,8 +1,12 @@
 import Dropdown from "./components/dropdown";
+import Muidropdown from "./components/muidropdown";
 
 function App() {
     return (
-        <Dropdown/>
+        <>
+            <Dropdown/>
+            <Muidropdown/>
+        </>
     );
 }
 
