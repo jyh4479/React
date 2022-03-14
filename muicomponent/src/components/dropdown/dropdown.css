@@ -54,10 +54,6 @@
     background: #e0e0e0;
 }
 
-.sub-menu > li {
-    background: skyblue;
-}
-
 .menu > li:first-child {
     border-radius: 5px 5px 0 0;
 }
@@ -78,10 +74,28 @@
     position: absolute;
     top: 25%;
     left: 85%;
+    cursor: pointer;
 }
 
 .menu > li svg:hover {
     color: #fff;
+}
+
+.menu > li svg:active {
+    transform: scale(0.90);
+}
+
+.sub-menu > li {
+    background: skyblue;
+    cursor: pointer;
+}
+
+.sub-menu > li:hover {
+    background: deepskyblue;
+}
+
+.sub-menu > li:active {
+    font-size: 14px;
 }
 
 .sub-menu.hide {
