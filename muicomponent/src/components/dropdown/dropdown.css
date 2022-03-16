@@ -98,14 +98,15 @@
 
 .sub-menu > li:active {
     font-size: 14px;
+    filter: brightness(80%);
 }
 
 .sub-menu.hide {
     max-height: 0;
-    transition: max-height 0.3s linear;
+    transition: max-height 0.2s linear;
 }
 
 .sub-menu.show {
     /*max-height: 150px;*/
-    transition: max-height 0.3s linear;
+    transition: max-height 0.2s linear;
 }

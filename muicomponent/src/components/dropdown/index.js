@@ -38,9 +38,15 @@ const Dropdown = props => {
                     <AddBoxRounded onClick={() => open(0)}/>
                 </div>
                 <ul ref={el => subMenuList.current[0] = el} className={"sub-menu hide"}>
-                    <MenuItem><div>Profile</div></MenuItem>
-                    <MenuItem><div>Profile</div></MenuItem>
-                    <MenuItem><div>Profile</div></MenuItem>
+                    <MenuItem>
+                        <div>Profile</div>
+                    </MenuItem>
+                    <MenuItem>
+                        <div>Profile</div>
+                    </MenuItem>
+                    <MenuItem>
+                        <div>Profile</div>
+                    </MenuItem>
                     {/*<li>*/}
                     {/*    <div>Sub1</div>*/}
                     {/*</li>*/}
