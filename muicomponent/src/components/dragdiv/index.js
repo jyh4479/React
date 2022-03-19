@@ -40,7 +40,7 @@ const DragDiv = () => {
     }
 
     return (
-        <div className={"container"}>
+        <div className={"drag-container"}>
             <div ref={divRef} className={"item"}>
                 DIV TEST
                 <div ref={el => lineRefs.current[0] = el} className={"line top"} draggable={true}/>

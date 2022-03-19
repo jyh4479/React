@@ -6,10 +6,10 @@ import DragDiv from "./components/dragdiv";
 function App() {
     return (
         <>
-            {/*<Dropdown/>*/}
+            <Dropdown/>
             {/*<Muidropdown/>*/}
             {/*<MyButton/>*/}
-            <DragDiv/>
+            {/*<DragDiv/>*/}
         </>
     );
 }
